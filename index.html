@@ -1,11 +1,582 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>Hello World!</p>
-</body>
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+   <title>PSHarmony</title>
+ </head>
+ <body class="body">
+   <script type="module">
+     function showApp() {
+   const appBody = document.querySelector('.app');
+   appBody.style.display = "block";
+}
+
+
+     const passwordCheck = (prompt = "Please enter the password:") => {
+       const password = window.prompt(prompt);
+       if(password !== "music2024") {
+         passwordCheck("Incorrect password, please try again:");
+     }
+     else {
+       showApp();
+     }
+      
+     }
+     if(import.meta.env.MODE !== "development"){
+       passwordCheck();
+     }
+
+   </script>
+   <div class="app" style="display: none;">
+             <!--Tutorial section-->
+            
+             <!--Tutorial speech bubbles section-->
+             <div class="tutorial-speech-bubbles-main-container">
+               <!--Speech bubble container 1-->
+                 <div class="speech-bubble-container1">
+                   <!--Speech bubble 5-->
+                     <div class="speech-bubble5 hiding">
+                       <p class="speech-bubble-writing">5. Click each graph to view the specific values for each geographical region and year</p>
+                       <div class="tutorial-button-container"><button class="speech-bubble-button speech-bubble-button5 hidden" data-index="5">FINISH</button>
+                       </div>
+                      
+                     </div>
+                 </div>
+                 <!--Speech bubble container 2-->
+                     <div class="speech-bubble-container2">
+                       <!--Speech bubble 2-->
+                         <div class="speech-bubble2 hiding">
+                           <p class="speech-bubble-writing">2. Select one or multiple music format type(s) to view their market data, either independently or cumulatively</p>
+                           <div class="tutorial-button-container"><button class="speech-bubble-button speech-bubble-button2 hidden" data-index="2">NEXT</button>
+                           </div>
+                         </div>
+                     </div>
+                     <!--Speech bubble container 3-->
+                           <div class="speech-bubble-container3">
+                             <!--Speech bubble 1-->
+                               <div class="speech-bubble1 hiding">
+                                 <p class="speech-bubble-writing">1. Select the desired artist in the dropdown box</p>
+                                 <div class="tutorial-button-container-first">
+                                   <button class="speech-bubble-button speech-bubble-button1 hidden" data-index="1">NEXT</button>
+                                   <button class="dismiss-button speech-bubble-button">DISMISS</button>
+                                 </div>
+                               </div>
+                           </div>
+                           <!--Speech bubble container 4-->
+                                   <div class="speech-bubble-container4">
+                                     <!--Speech bubble 3-->
+                                       <div class="speech-bubble3 hiding">
+                                         <p class="speech-bubble-writing">3. Select 'Market Data' to view sales volume, value and average selling price of formats for the artist</p>
+                                         <div class="tutorial-button-container"><button class="speech-bubble-button speech-bubble-button3" data-index="3">NEXT</button>
+                                         </div>
+                                       </div>
+                                       <!--Speech bubble 4-->
+                                       <div class="speech-bubble4 hiding">
+                                         <p class="speech-bubble-writing">4. Select 'Product Recommendations' to view formats suitable for the artist selected</p>
+                                         <div class="tutorial-button-container"><button class="speech-bubble-button speech-bubble-button4" data-index="4">NEXT</button>
+                                         </div>
+                                       </div>
+                                   </div>
+             </div>
+    
+    
+             <!-- Main box section -->
+             <div class="outline-box">
+                <!-- Top title section-->
+                <div class="top-two-containers">
+                 <h1 class="main-title"></h1>
+                   <div class="selector-container">
+                     <select class="medicine-selector" disabled>
+                     </select>
+                   </div>
+                 </div>
+               <div class="top-box">
+                     <!--Container 1 - Contains titles and buttons on LHS of top box-->
+                     <div class="container-1">
+                           <!-- In box top titles -->
+                           <div class="inside-main-box-titles">
+                                 <div class="OBN">
+                                 <p class="title">RECORD COMPANY</p>
+                                 <p class="brand-name sub-title"></p>
+                                 </div>
+                                     <div class="indication-container">
+                                       <P class="title">STYLE</P>
+                                       <p class="indication sub-title"></p>
+                                     </div>
+                                        
+                           </div>
+                           <!-- Device and view -->
+                           <div class="device-and-view">
+                             <p class="device title">FORMAT</p>
+                           </div>
+
+
+                           <!-- Buttons section -->
+                           <div class="buttons-section-red">
+                             <button class="prefilled-syringe clicked-red red-button" data-value="Prefilled Syringe">DOWNLOAD</button>
+                             <button class="disposable-autoinjector red-button" data-value="Disposable autoinjectors">VINYL</button>
+                             <!--NOTE - have removed class of button-red from disposable pen for now - so it doesn't work-->
+                             <button class="disposable-pen red-button" data-value="disposable pen">CD</button>
+                           
+                           </div>
+                     </div>
+                     <!--Container 2-->
+                     <div class="container-2">
+                       <div class="US-patent-expiry-container">
+                         <P class="title">LAST RELEASE DATE</P>
+                         <p class="US-patent-expiry sub-title"></p>
+                       </div>
+                       <div class="device-and-view">
+                         <P class="view title">VIEW</P>
+                       </div>
+                       <div class="buttons-section-purple">
+                         <!--Container with 'Market data' title and LH button-->
+                         <div class="purple-button-container">
+                           <div class="prod-rec-market-data-titles">
+                           <p class="button-titles">Market</p>
+                           <p class="button-titles">Data</p>
+                         </div>
+                         <button class=" button-purple chart clicked-purple" data-value="chart">
+                           <img class="graph-image image" src="./public/holder-image.png" alt="Chart outline in white" width="25">
+                           </button>
+                         </div>
+                         <!--Container with 'Product Recommendations' title and RH button-->
+                         <div class="purple-button-container">
+                           <div class="prod-rec-market-data-titles">
+                             <p class="button-titles">Product</p>
+                           <p class="button-titles">Recommendations</p>
+                         </div>
+                         <button class="button-purple product-recommendations" data-value="product recommendations">
+                           <img class="syringe-image image" src="./public/holder-image.png" alt="Syringe outline in white" width="25">
+                           </button>
+                         </div>
+                       </div>
+                    
+                     </div>
+                   </div>
+                   <div class="product-recommendations-main-page-container hidden">
+                         <!--Product recs LHS container info-->
+                         <div class="product-recommendations-side-container">
+                                    
+                                     <!--Medicine LH pictures and writing-->
+                                     <div class="medicine-picture-and-writing-wrapper">
+                                         <h2 class="product-recommendations-title medicine-title">Product recommendations:</h2>
+                                         <div class="'border">
+
+
+                                               <!--Medicine LH container 1-->
+                                               <div class="medicine-container medicine-container1">
+                                                   <div class="pr-medicine-picture-container1 medicine-picture-box">
+                                                   <img class="medicine-pic medicine-pic1" alt="medicine image" src="./public/holder-image.png">
+                                                   </div>
+                                                   <div class="pr-medicine-writing-container1 medicine-writing-box">
+                                                       <p class="medicine-name">TEST 1</p>
+                                                   </div>
+                                                   <div class="medicine-bottom-bar medicine-bottom-bar1">
+                                                     <div class="medicine-bottom-bar-container1 medicine-left-logo-container">
+                                                               <div><a href="www.google.com" target="_blank">
+                                                               <img class='medicine-bottom-bar-image' src='"./public/holder-image.png"'></a>
+                                                               </div>
+                                                               <div class="presentations-and-brochures icon-writing-container">
+                                                                 <p class="icon-writing">Presentations/Brochures</p>
+                                                               </div>
+                                                     </div>  
+                                                     <div class="medicine-bottom-bar-container2 medicine-right-logo-container">
+                                                               <div>
+                                                                 <img class='medicine-bottom-bar-image hiding' src='/Video.png'>
+                                                               </div>
+                                                               <div class="videos icon-writing-container">
+                                                                 <p class="icon-writing hidden">Videos</p>
+                                                               </div>
+                                                     </div>
+                                                  </div>
+                                               </div> 
+                                               <!--Medicine LH container 2-->
+                                                                   <div class="medicine-container medicine-container2">
+                                                                       <div class="pr-medicine-picture-container2 medicine-picture-box">
+                                                                         <img class="medicine-pic medicine-pic2" alt="medicine image" src="">
+                                                                       </div>
+                                                                           <div class="pr-medicine-writing-container2 medicine-writing-box">
+                                                                           <p class="medicine-name">Test</p>
+                                                                          
+                                                                           </div>
+                                                                           <div class="medicine-bottom-bar medicine-bottom-bar2">
+                                                                             <div class="medicine-bottom-bar-container3 medicine-left-logo-container">
+                                                                                     <div>
+                                                                                       <a href="www.google.com" target="_blank">
+                                                                                       <img class='medicine-bottom-bar-image' src='/Pamphlet.png'></a>
+                                                                                      
+                                                                                     </div>
+                                                                                     <div class="presentations-and-brochures icon-writing-container">
+                                                                                       <p class="icon-writing">Presentations/Brochures</p>
+                                                                                     </div>
+                                                                             </div>  
+                                                                             <div class="medicine-bottom-bar-container4 medicine-right-logo-container">
+                                                                                     <div>
+                                                                                       <a href="www.google.com​" target="_blank">
+                                                                                       <img class='medicine-bottom-bar-image' src='/Video.png'></a>
+                                                                                      
+                                                                                     </div>
+                                                                                     <div class="videos icon-writing-container">
+                                                                                       <p class="icon-writing">Videos</p>
+                                                                                     </div>
+                                                                             </div> 
+                                                                           </div>
+                                                                         </div>
+                                              
+                                            
+                                                                       <!--Medicine LH container 3-->
+                                                                       <div class="medicine-container medicine-container3">
+                                                                                   <div class="pr-medicine-picture-container3 medicine-picture-box">
+                                                                                     <img class="medicine-pic medicine-pic3" alt="medicine image" src="./public/holder-image.png"">
+                                                                                   </div>
+                                                                                         <div class="pr-medicine-writing-container3 medicine-writing-box">
+                                                                                           <p class="medicine-name"></p>
+                                                                                          
+                                                                                         </div><div class="medicine-bottom-bar medicine-bottom-bar3">
+                                                                                           <div class="medicine-bottom-bar-container4 medicine-left-logo-container">
+                                                                                                     <div>
+                                                                                                       <a href="www.google.com" target="_blank">
+                                                                                                       <img class='medicine-bottom-bar-image' src='/Pamphlet.png'></a>
+                                                                                                      
+                                                                                                     </div>
+                                                                                                     <div class="presentations-and-brochures icon-writing-container">
+                                                                                                       <p class="icon-writing">Presentations/Brochures</p>
+                                                                                                     </div>
+                                                                                           </div>  
+                                                                                           <div class="medicine-bottom-bar-container5 medicine-right-logo-container">
+                                                                                                     <div>
+                                                                                                       <a href="www.google.com" target="_blank">
+                                                                                                       <img class='medicine-bottom-bar-image' src='/Video.png'></a>
+                                                                                                      
+                                                                                                     </div>
+                                                                                                     <div class="videos icon-writing-container">
+                                                                                                       <p class="icon-writing">Videos</p>
+                                                                                                     </div>
+                                                                                           </div> 
+                                                                                         </div>
+
+
+                                                                       </div>
+                                                                       <!--Medicine LH container 4-->
+                                                                               <div class="medicine-container medicine-container4 hidden">
+                                                                                 <div class="pr-medicine-picture-container4 medicine-picture-box">
+                                                                            
+                                                                                 <img class="medicine-pic medicine-pic4" alt="medicine image" src="./public/holder-image.png">
+                                                                                 </div>
+                                                                                 <div class="pr-medicine-writing-container4 medicine-writing-box">
+                                                                                     <p class="medicine-name">Test</p>
+                                                                                 </div>
+                                                                                       <div class="medicine-bottom-bar medicine-bottom-bar4">
+                                                                                         <div class="medicine-bottom-bar-container6 medicine-left-logo-container">
+                                                                                      
+                                                                                                   <div><a href="www.google.com" target="_blank">
+                                                                                                   <img class='medicine-bottom-bar-image' src='/Pamphlet.png'></a>
+                                                                                                   </div>
+                                                                                                   <div class="presentations-and-brochures icon-writing-container">
+                                                                                                     <p class="icon-writing">Presentations/Brochures</p>
+                                                                                                   </div>
+                                                                                         </div>  
+                                                                                                 <div class="medicine-bottom-bar-container7 medicine-right-logo-container">
+                                                                                                   <div>
+                                                                                                    
+                                                                                                     <a href="www.google.com" target="_blank">
+                                                                                                     <img class='medicine-bottom-bar-image' src='/Video.png'></a>
+                                                                                                    
+                                                                                                   </div>
+                                                                                                   <div class="videos icon-writing-container">
+                                                                                                     <p class="icon-writing">Videos</p>
+                                                                                                   </div>
+                                                                                                 </div>
+
+
+                                                                               </div>
+                                                                             </div>  
+                                                                                             <!--Medicine LH container 5-->
+                                                                                                 <div class="medicine-container medicine-container5 hidden">
+                                                                                                   <div class="pr-medicine-picture-container5 medicine-picture-box">
+                                                                                                   <img class="medicine-pic medicine-pic5 ultrasafe-plus-pic" alt="medicine image" src="./public/holder-image.png">
+                                                                                                   </div>
+                                                                                                   <div class="pr-medicine-writing-container5 medicine-writing-box">
+                                                                                                       <p class="medicine-name">Test</p>
+                                                                                                   </div>
+                                                                                                   <div class="medicine-bottom-bar medicine-bottom-bar5">
+                                                                                                     <div class="medicine-bottom-bar-container8 medicine-left-logo-container">
+                                                                                                    
+                                                                                                               <div><a href="www.google.com" target="_blank">
+                                                                                                               <img class='medicine-bottom-bar-image' src='/Pamphlet.png'></a>
+                                                                                                               </div>
+                                                                                                               <div class="presentations-and-brochures icon-writing-container">
+                                                                                                                 <p class="icon-writing">Presentations/Brochures</p>
+                                                                                                               </div>
+                                                                                                     </div>  
+                                                                                                     <div class="medicine-bottom-bar-container9 medicine-right-logo-container">
+                                                                                                               <div><img class='medicine-bottom-bar-image hiding' src='/Video.png'>
+                                                                                                               </div>
+                                                                                                               <div class="videos icon-writing-container">
+                                                                                                                 <p class="icon-writing hidden">Videos</p>
+                                                                                                               </div>
+                                                                                                     </div>
+
+
+                                                                                                 </div>
+                                                                                               </div>     
+
+
+                                                                                               <!--Medicine LH container 6-->
+                                                                                                                   <div class="medicine-container medicine-container6 hidden">
+                                                                                                                     <div class="pr-medicine-picture-container6 medicine-picture-box">
+                                                                                                                     <img class="medicine-pic medicine-pic6" alt="medicine image" src="./public/holder-image.png">
+                                                                                                                     </div>
+                                                                                                                     <div class="pr-medicine-writing-container6 medicine-writing-box">
+                                                                                                                         <p class="medicine-name">Test</p>
+                                                                                                                     </div>
+                                                                                                                     <div class="medicine-bottom-bar medicine-bottom-bar6">
+                                                                                                                       <div class="medicine-bottom-bar-container10 medicine-left-logo-container">
+
+
+                                                                                                                                 <div><a href="www.google.com" target="_blank">
+                                                                                                                                 <img class='medicine-bottom-bar-image' src='/Pamphlet.png'></a>
+                                                                                                                                 </div>
+                                                                                                                                 <div class="presentations-and-brochures icon-writing-container">
+                                                                                                                                   <p class="icon-writing">Presentations/Brochures</p>
+                                                                                                                                 </div>
+                                                                                                                       </div>  
+                                                                                                                       <div class="medicine-bottom-bar-container11 medicine-right-logo-container">
+                                                                                                                         <div>
+                                                                                                                          
+                                                                                                                           <a href="www.google.com​" target="_blank">
+                                                                                                                           <img class='medicine-bottom-bar-image' src='/Video.png'></a>
+                                                                                                                          
+                                                                                                                         </div>
+                                                                                                                         <div class="videos icon-writing-container">
+                                                                                                                           <p class="icon-writing">Videos</p>
+                                                                                                                         </div>
+                                                                                                                       </div>
+
+
+                                                                                                                   </div>
+                                                                                                                 </div>     
+                                            
+                                             
+                                                                                              
+                                                
+                                                                            
+                                             
+                                                                      
+                                      </div>
+                                     </div>
+                                   </div>
+                                 <!--Product recs RHS container info-->
+                                
+                                 <div class="marketed-examples-container">
+                                   <!-- <div class="marketed-examples-title-container"> -->
+                                     <h2 class="marketed-examples-title medicine-title">Marketed Examples:</h2>
+                                   <!-- </div> -->
+                                   <!-- <div class="wrapper-main-medicine-image"> -->
+                                   <img class="medicine-image-large" alt="medicine image" src="./public/holder-image.png">
+                                 <!-- </div> -->
+                                 <p class="device-name medicine-name"></p>
+                                 </div>
+                               </div>
+                        
+
+
+                   
+                        
+                  
+
+
+                   <!-----------GRAPH SECTION----------------->
+                   <!--Graph Title and Legend section-->
+                   <div class="graph-caption-wrapper">
+                       <div class="graph-subtitle-section1">
+                       <!--Spacing container below-->
+                             <div class="graph-caption-container-1 hiding">*************</div>
+                             <!--Title container below-->
+                             <div class="graph-caption-container-2"><h2 class="graph-caption">Hover over the bars or click the charts to view specific values</h2></div>
+                     </div>
+                       <div class="graph-subtitle-section2">
+                       <!--Spacing container below-->
+                             <div class="graph-caption-container-3 hiding">********************************</div>
+                             <!--Legend container below-->
+                                       
+                               </div>
+                    
+                     </div>
+                   <!--------------Graphs------------->
+                   <div class="graph-wrapper">
+                                     <!--Graph container 1-->
+                                     <div class="graph1-outer-container graph-outer-container">
+                                       <p class="graph-title">VOLUME (units)</p>
+                                     <div class="graph-container1 graph-card" data-value="vol-graph">
+                                       <!-- <div class="hover-caption">Hover over bars to view specific values</div> -->
+                                    
+                                     <canvas id="graph1" class="graph-canvas"></canvas>
+                                    
+                                     </div>
+                                  
+                                           <!--Chart Container 1-->
+                                           <div class="volChartCard hidden chart-card" data-value="vol-chart">
+                                             <!-- <p class="chart-card-writing chart-writing-vol">VOLUME (units)</p> -->
+                                             <div class="volChartBox chart-box">
+                                             </div>
+                                           </div>
+                                         </div>
+                                                     <!--Graph container 2-->
+                                                     <div class="graph2-outer-container graph-outer-container">
+                                                       <p class="graph-title">VALUE ($)</p>
+                                                     <div class="graph-container2 graph-card" data-value="val-graph">
+                                                       <!-- <div class="hover-caption">Hover over bars to view specific values.</div> -->
+                                                      
+                                                       <canvas id="graph2" class="graph-canvas"></canvas>
+                                                       <div class="legendBox"></div>
+                                                     </div>
+                                                  
+                                                             <!--Chart Container 2-->
+                                                         <div class="valChartCard hidden chart-card" data-value="val-chart">
+                                                           <!-- <p class="chart-card-writing chart-writing-val">VALUE ($)</p> -->
+                                                           <div class="valChartBox chart-box">
+                                                           </div>
+                                                         </div>
+                                                       </div>
+
+
+                                                                     <!--Graph container 3-->
+                                                                     <div class="graph3-outer-container graph-outer-container">
+                                                                       <p class="graph-title graph-title3">AVERAGE SELLING PRICE ($)</p>
+                                                                     <div class="graph-container3 graph-card" data-value="asp-graph">
+                                                                       <!-- <div class="hover-caption">Hover over bars to view specific values</div> -->
+                                                                        
+                                                                         <canvas id="graph3" class="graph-canvas"></canvas>
+                                                                         <div class="legendBox"></div>
+                                                                     </div>
+                                                                  
+                                                                                       <!--Chart Container 3-->
+                                                                                 <div class="aspChartCard hidden chart-card" data-value="asp-chart">
+                                                                                   <!-- <p class="chart-card-writing chart-writing-asp">AVERAGE SELLING PRICE ($)</p> -->
+                                                                                   <div class="aspChartBox chart-box">
+                                                                                    
+                                                                                   </div>
+                                                                                 </div>
+                                                                               </div>
+
+
+             </div>
+             <div class="legend-bottom-container">
+               <div class="legend-bottom-spacer">
+                 <div class="show-tutorial-button-container">
+                   <button class="show-tutorial">Show Tutorial</button>
+                 </div>
+                
+               </div>
+             <div class="legend-wrapper hidden">
+               <div class="legend-box-1">
+                   <div class="pfs-legend-box legend-box">
+                     <div class="pfs-legend-square">
+                       <div class="pfs-split-square-image split-square">
+                         <div class="pfs-square-divider-1 square-divider"><p class="hiding">1</p></div>
+                         <div class="pfs-square-divider-2 square-divider"><p class="hiding">2</p></div>
+                         <div class="pfs-square-divider-3 square-divider"><p class="hiding">3</p></div>
+                        
+                       </div>
+                     </div>
+                       <div class="pfs-legend-writing legend-writing lhs-legend-writing">Download</div>
+                   </div>
+                      
+                   <div class="daij-legend-box legend-box">
+                     <div class="daij-legend-square">
+                       <div class="daij-split-square-image split-square">
+                         <div class="daij-square-divider-1 square-divider"><p class="hiding">1</p></div>
+                         <div class="daij-square-divider-2 square-divider"><p class="hiding">2</p></div>
+                         <div class="daij-square-divider-3 square-divider"><p class="hiding">3</p></div>
+                        
+                       </div>
+                     </div>
+                       <div class="daij-legend-writing legend-writing lhs-legend-writing">Vinyl</div>
+
+
+                   </div>
+                   <div class="dp-legend-box legend-box">
+                     <div class="dp-legend-square">
+                       <div class="dp-split-square-image split-square">
+                         <div class="dp-square-divider-1 square-divider"><p class="hiding">1</p></div>
+                         <div class="dp-square-divider-2 square-divider"><p class="hiding">2</p></div>
+                         <div class="dp-square-divider-3 square-divider"><p class="hiding">3</p></div>
+                        
+                       </div>
+                     </div>
+                       <div class="dp-legend-writing legend-writing lhs-legend-writing">CD</div>
+
+
+                   </div>
+                  
+                  
+                 </div>
+                         <div class="legend-box-2">
+
+
+                           <div class="legend-RHS-year-1">
+                             <!-- <div class="year1-square hidden"> -->
+                                <div class="year1-triangles-square triangles-square hidden">
+                                <div class="first-year-square-image split-square">
+                                 <div class="first-triangle-top-left triangle"></div>
+                               </div>
+                               </div>
+                               <!--Including 3 datasets - when third button clicked this will show-->
+                               <div class="year1-split-square-image split-square year-threepart-square">
+                                 <div class="year1-square-divider-1 square-divider"><p class="hiding">1</p></div>
+                                 <div class="year1-square-divider-2 square-divider"><p class="hiding">2</p></div>
+                                 <div class="year1-square-divider-3 square-divider"><p class="hiding">3</p></div>
+                             </div>
+                             <div class="year1-writing legend-writing year-writing">2021</div>
+                           </div>
+                           <div class="legend-RHS-year-2">
+                             <div class="year2-triangles-square triangles-square hidden">
+                               <div class="second-year-square-image split-square">
+                                 <div class="second-triangle-top-left triangle"></div>
+                               </div>
+                               </div>
+                               <!--Including 3 datasets - when third button clicked this will show-->
+                               <div class="year2-split-square-image split-square year-threepart-square">
+                                 <div class="year2-square-divider-1 square-divider"><p class="hiding">1</p></div>
+                                 <div class="year2-square-divider-2 square-divider"><p class="hiding">2</p></div>
+                                 <div class="year2-square-divider-3 square-divider"><p class="hiding">3</p></div>
+                             </div>
+                             <div class="year2-writing legend-writing year-writing">2022</div>
+                           </div>
+                           <div class="legend-RHS-year-3">
+                             <div class="year3-triangles-square triangles-square hidden">
+                               <div class="third-year-square-image split-square">
+                                 <div class="third-triangle-top-left triangle"></div>
+                               </div>
+                               </div>
+                                <!--Including 3 datasets - when third button clicked this will show-->
+                                <div class="year3-split-square-image split-square year-threepart-square">
+                                 <div class="year3-square-divider-1 square-divider"><p class="hiding">1</p></div>
+                                 <div class="year3-square-divider-2 square-divider"><p class="hiding">2</p></div>
+                                 <div class="year3-square-divider-3 square-divider"><p class="hiding">3</p></div>
+                             </div>
+                             <div class="year3-writing legend-writing year-writing">2023F</div>
+                           </div>
+
+
+                         </div>
+      
+       </div>
+     </div>
+           </div>
+         </div>
+   </div>
+ </div>
+</div>
+   <script type="module" src="/main.js"></script>
+   <script type="module" src="/chart.js"></script>
+   <script type="module" src="./datasets.js"></script>
+   <script type="module" src="./chartjs-plugin.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+ </body>
 </html>

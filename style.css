@@ -1,0 +1,2114 @@
+@font-face {
+    font-family: 'fs_albert_proregular';
+    src: url('fonts/fsalbertpro-webfont.woff2') format('woff2'),
+         url('fonts/fsalbertpro-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+   
+   
+   }
+   p {
+    font-family: 'fs_albert_proregular';
+   }
+   
+   
+   html {
+    height: 95vh;
+   }
+   
+   
+   body {
+    font-family: 'fs_albert_proregular';
+    font-size: 0.9rem;
+    font-weight: 600;
+    height: 95vh;
+   }
+   
+   
+   /* .app {
+    margin: 1rem;
+   } */
+   
+   
+   /* Outline container */
+   
+   
+   .outline-box {
+    border-style: solid;
+    border-width: 0.2rem;
+    /* padding-bottom: 5rem; */
+    margin: 0.5rem 0.5rem 0 0.5rem ;
+    /* margin: 0 auto; */
+    
+   }
+   
+   
+   /* Top section - Main title dropdown*/
+   
+   
+   .top-two-containers {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e5e3eb;
+    padding-left: 3rem;
+    padding-top: 0.3rem;
+   }
+   
+   
+   .main-title {
+    font-size: 1.8rem;
+    line-height: 0.1rem;
+    /* padding: 1rem 0 0 1rem; */
+   }
+   
+   
+    .selector-container {
+      margin-bottom: -1rem;
+      padding-bottom: -1rem;
+    }
+   
+   
+    .medicine-selector {
+      cursor: pointer;
+      width: 18.5rem;
+      height: 2rem;
+      margin-top: 0.5rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      outline: 0;
+      margin-right: 1rem;
+      /* border: 1px solid black; */
+   
+   
+    }
+   
+   
+    /* Top section of page (within the outline box) - which contains the buttons and titles */
+   
+   
+    .top-box {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: 0.1rem solid black;
+      /* border-style: solid; */
+      padding: 0 1rem 0rem 3rem;
+      /* padding: 1rem;  */
+      background-color: #e5e3eb;
+      flex-wrap: wrap;
+    }
+   
+   
+    /*LHS Container - Holding all the titles and buttons (above graphs)*/
+    .container1 {
+      display: flex;
+      flex-direction: column;
+    }
+   
+   
+    /*Items inside container 1*/
+   
+   
+    .inside-main-box-titles {
+      display: flex;
+     
+    }
+   
+   
+    .OBN {
+      margin: 0rem 0.2rem 0rem 0rem;
+    }
+   
+   
+    .indication-container {
+      margin: 0rem 0.2rem 0rem 2rem;
+    }
+   
+   
+    /*Red buttons container*/
+   
+   
+    .buttons-section-red {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      /* background-color: green; */
+      padding-top: 3rem;
+    }
+   /*button*/
+    .prefilled-syringe {
+      cursor: pointer;
+      white-space: normal;
+      border-color: #aa9ba6;
+      color: #aa9ba6;
+      background-color: white;
+      width: 15rem;
+      height: 3.5rem;
+      border-radius: 9px;
+      border-style: solid;
+      border-width: 0.3rem;
+      padding: 0.2rem 2rem 0.2rem 2rem;
+      margin: 0.3rem;
+      font-weight: 600;
+      font-size: 18px;
+    }
+     .prefilled-syringe.clicked-red {
+      border-color: #cd6554;
+      background-color: #cd6554;
+      color: white;
+      white-space: normal;
+     
+    }
+     /*button*/
+    .disposable-autoinjector {
+      /* border-color: #cd6554; */
+      cursor: pointer;
+      border-color: #aa9ba6;
+      /* color: #cd6554; */
+      color: #aa9ba6;
+      background-color: white;
+      white-space: normal;
+      width: 15rem;
+      height: 3.5rem;
+      border-radius: 9px;
+      border-style: solid;
+      border-width: 0.3rem;
+      padding: 0.2rem 1.5rem 0.2rem 1.5rem;
+      margin: 0.3rem;
+      font-weight: 600;
+      font-size: 18px;
+    }
+     .disposable-autoinjector.clicked-red {
+      border-color: #cd6554;
+      background-color: #cd6554;
+      color: white;
+      white-space: normal;
+     
+    }
+   
+   
+    /*button*/
+    .disposable-pen {
+      cursor: pointer;
+      white-space: normal;
+      border-color: #aa9ba6;
+      color: #aa9ba6;
+      background-color: white;
+      width: 15rem;
+      height: 3.5rem;
+      border-radius: 9px;
+      border-style: solid;
+      border-width: 0.3rem;
+      padding: 0.2rem 2.5rem 0.2rem 2.5rem;
+      margin: 0.3rem;
+      font-weight: 600;
+      font-size: 18px;
+    }
+   
+   
+    .disposable-pen.clicked-red {
+      border-color: #cd6554;
+      background-color: #cd6554;
+      color: white;
+      white-space: normal;
+     
+    }
+   
+   
+    /*RHS Container - Holding all the titles and buttons (above graphs)*/
+   .container-2 {
+    flex-wrap: wrap;
+    padding-right: 3rem;
+   }
+   
+   
+   .US-patent-expiry-container {
+    /* padding-bottom: 1rem; */
+    padding-right: 0.5rem;
+   }
+   
+   
+   /* .view {
+    line-height: 4px;
+    margin-bottom: 8px;
+    } */
+   
+   
+    /*button*/
+    .chart {
+      cursor: auto;
+      white-space: normal;
+      border-color: #7f89c1;
+      width: 6.7rem;
+      height: 3.5rem;
+      border-radius: 9px;
+      border-style: solid;
+      border-width: 0.3rem;
+      padding: 0.2rem;
+      /* margin: 0.4rem; */
+      margin: 1rem 0.5rem 0.4rem 0.1rem;
+     
+    }
+     /*button*/
+    .product-recommendations {
+      cursor: pointer;
+      white-space: normal;
+      border-color: #7f89c1;
+      width: 6.7rem;
+      height: 3.5rem;
+      border-radius: 9px;
+      border-style: solid;
+      border-width: 0.3rem;
+      padding: 0.2rem;
+      /* margin: 0.4rem; */
+      margin: 0.3rem 0.5rem 0.4rem 0;
+     }
+   
+   
+    .button-purple.clicked-purple {
+      background-color: #7f89c1;
+    }
+   
+   
+    /*Class for styling images on both purple buttons*/
+    .image {
+      width: 2rem;
+    }
+   
+   
+    .buttons-section-purple {
+      /* background-color: yellow; */
+      display: flex;
+      flex-direction: column;
+    }
+   
+   
+    /*Purple button and titles container*/
+   
+   
+    .purple-button-container {
+      display: flex;
+      flex-direction: row-reverse;
+   
+   
+      align-items: center;
+      justify-content: flex-end;
+      /* background-color: pink; */
+    }
+   
+   
+    .button-titles {
+      font-size: 1rem;
+      line-height: 0;
+      margin-bottom: 0.7rem;
+      margin-right: 0.3rem;
+    }
+   
+   
+    .prod-rec-market-data-titles {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      /* margin-top: 0.8rem; */
+    }
+   
+   
+   
+   
+    /*Class styling containers which contain device and view headings*/
+   .device-and-view {
+    display: flex;
+    line-height: 0.01;
+    margin-top: -20px;
+    margin-bottom: -22px;
+    /* background-color: red; */
+    /* margin-bottom: 5px; */
+    }
+   
+   
+    /*Graph (middle LHS) caption and legend section*/
+   
+   
+    .graph-caption-wrapper {
+      display: flex;
+      flex-direction: row;
+      /* background-color: blue; */
+      justify-content: space-between;
+    }
+    
+    .graph-caption-wrapper.hidden {
+      display: none;
+    }
+   
+   
+    .graph-caption {
+      font-size: 1.1rem;
+    }
+    
+    /*Container 1 of title and legend section - contains: graph caption conatainer 1 and 2*/
+    .graph-subtitle-section1 {
+      display: flex;
+      flex-direction: row;
+    }
+   
+   
+    .legend-bottom-spacer {
+      display: flex;
+      flex-direction: column-reverse;
+      align-content: flex-end;
+    }
+     /*Spacer container*/
+   
+   
+    /* .graph-caption-container-1 {
+      background-color: white;
+     } */
+    
+     .graph-caption-container-2 {
+       /* background-color: lightblue; */
+       padding-top: 0rem;
+       line-height: 0.7rem;
+     }
+      /*Container 2 of title and legend section - contains: graph caption conatainer 3 and 4*/
+    .graph-subtitle-section2 {
+      display: flex;
+      flex-direction: row;
+      /* background-color: green; */
+      justify-content: space-between;
+    }
+     /*Spacer container*/
+   
+   
+    /* .graph-caption-container-3 {
+      background-color: red;
+    } */
+   
+   
+    /*Legend Section - Container 4*/
+     .legend-wrapper {
+      /* background-color: lightpink; */
+      display: flex;
+      flex-direction: row;
+      border: solid;
+      border-width: 1px;
+      /* margin-left: 1rem; */
+      padding: 0 1rem 0rem 0;
+    }
+     /*Class to hide spacer containers from view */
+    .hiding {
+      visibility: hidden;
+    }
+     /*Legend Container - LHS*/
+    .legend-box-1 {
+      /* background-color: red; */
+      display: flex;
+      flex-direction: column;
+      /* padding-top: 0.5rem; */
+      padding-left: 0.5rem;
+      padding-right: 2.5rem;
+    }
+     .pfs-legend-box {
+     /* background-color: green; */
+     display: flex;
+     flex-direction: row;
+     align-items: flex-end;
+    }
+     /* .pfs-legend-square {
+      /* background-color: pink; */
+      /* padding-top: 0.1rem;;
+    }  */
+     /* .pfs-legend-writing {
+      background-color: aqua;
+     
+    } */
+     .daij-legend-box {
+      /* background-color: yellow; */
+      display: flex;
+     flex-direction: row;
+     align-items: flex-end;
+    }
+     /* .daij-legend-square {
+     /* background-color: #7f89c1; */
+     /* padding-top: 0.3rem;
+    }   */
+   
+   
+    .dp-legend-box {
+      /* background-color: yellow; */
+      display: flex;
+     flex-direction: row;
+     align-items: center;
+     /* margin-bottom: 2rem; */
+    }
+   
+   
+    /* .dp-legend-square {
+      /* background-color: #7f89c1; */
+      /* padding-top: 0.3rem;
+     }   */
+   
+   
+     .dp-square-divider-1 {
+      background-color: red;
+     }
+   
+   
+     .dp-square-divider-2 {
+      background-color: yellow;
+     }
+   
+   
+     .dp-square-divider-3 {
+      background-color: blue;
+     }
+   
+   
+   
+   
+     /* .daij-legend-writing {
+      background-color: blue;
+    } */
+     /*Legend Container - RHS*/
+    .legend-box-2 {
+      /* background-color: yellow; */
+      display: flex;
+      flex-direction: row;
+      padding-top: 0.5rem;
+      justify-content: center;
+    }
+     .legend-RHS-year-1 {
+      /* background-color: #fdc640; */
+      display: flex;
+      flex-direction: row;
+     }
+     /* .year1-square {
+      background-color: purple;
+    }
+         
+    .year1-writing {
+      background-color: lightcoral;
+    } */
+     .legend-RHS-year-2 {
+      /* background-color: #69e2ff; */
+      display: flex;
+      flex-direction: row;
+    }
+     /* .year2-square {
+    background-color: aquamarine;
+    }
+         
+    .year2-writing {
+      background-color: orange;
+    } */
+     .legend-RHS-year-3 {
+      /* background-color: red; */
+      display: flex;
+      flex-direction: row;
+    }
+     /* .year3-square {
+      background-color: lightgreen;
+    }
+         
+    .year3-writing {
+      background-color: lightskyblue;
+    } */
+     .first-year-square-image {
+      height: 1.5rem;
+      width: 1.5rem;
+      overflow: hidden;
+      background-image: url(http://www.webdesign.org/img_articles/14881/site-background-pattern-07.jpg);
+    }
+     .first-triangle-top-left {
+      width: 0;
+      height: 0;
+      border-top: 1.5rem solid;
+      border-right: 1.5rem solid;
+    }
+     .second-year-square-image {
+      height: 1.5rem;
+      width: 1.5rem;
+      overflow: hidden;
+      background-image: url(http://www.webdesign.org/img_articles/14881/site-background-pattern-07.jpg);
+    }
+     .second-triangle-top-left {
+      width: 0;
+      height: 0;
+      border-top: 1.5rem solid;
+      border-right: 1.5rem solid;
+    }
+     .third-year-square-image {
+      height: 1.5rem;
+      width: 1.5rem;
+      overflow: hidden;
+      background-image: url(http://www.webdesign.org/img_articles/14881/site-background-pattern-07.jpg);
+    }
+     .third-triangle-top-left {
+      width: 0;
+      height: 0;
+      border-top: 1.5rem solid;
+      border-right: 1.5rem solid;
+    }
+     .pfs-split-square-image {
+      height: 1.5rem;
+      width: 1.5rem;
+      overflow: hidden;
+      /* background-color:  green; */
+      display: flex;
+      flex-direction: row;
+    }
+     /* .pfs-square-divider-1 {
+      background-color: yellow;
+    } */
+     /* .pfs-square-divider-2 {
+      background-color: lightgreen;
+    }
+     .pfs-square-divider-3 {
+      background-color: orange;
+    } */
+     .daij-split-square-image {
+      height: 1.5rem;
+      width: 1.5rem;
+      overflow: hidden;
+      /* background-color:  green; */
+      display: flex;
+      flex-direction: row;
+    }
+   
+   
+    .dp-split-square-image {
+      height: 1.5rem;
+      width: 1.5rem;
+      overflow: hidden;
+      /* background-color:  green; */
+      display: flex;
+      flex-direction: row;
+    }
+   
+   
+    .year-threepart-square {
+      height: 1.5rem;
+      width: 1.5rem;
+      overflow: hidden;
+      /* background-color:  green; */
+      display: flex;
+      flex-direction: row;
+    }
+   
+   
+    /* .square-divider {
+      width: 0.5rem;
+    } */
+     /* .daij-square-divider-1 {
+      background-color: yellow;
+    }
+     .daij-square-divider-2 {
+      background-color: lightgreen;
+    }
+     .-square-divider-3 {
+      background-color: orange;
+    } */
+   
+   
+    /*General classes for styling parts of legend*/
+   
+   
+    .split-square {
+      margin: 0.4rem;
+      display: flex;
+      flex-direction: row;
+      }
+     
+      /*Class to style year writing only*/
+      .year-writing {
+        margin: 0.3rem 0.1rem;
+      }
+     
+      .lhs-legend-writing{
+        /* margin-top: 1rem; */
+        margin-bottom: 0.2rem;
+      }
+   
+   
+   /*General class - to style all legend writing*/
+    .legend-writing {
+      font-size: 1rem;
+      font-weight: 300;
+    }
+   
+   
+   /*Graphs Section*/
+   
+   
+   .graph-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    /* padding-top: 2rem; */
+    padding-bottom: 0.2rem;
+    flex-wrap: wrap;
+    }
+   
+   
+   .graph-container1 {
+    cursor: pointer;
+    min-width: 0;
+    margin-bottom: 1rem;
+   }
+   
+   
+   .graph-container2 {
+    cursor: pointer;
+    min-width: 0;
+    margin-bottom: 1rem;
+    }
+   
+   
+   .graph-container3 {
+    cursor: pointer;
+    min-width: 0;
+    margin-bottom: 1rem;
+   }
+   
+   
+   /*General classes - for styling all graphs */
+   
+   
+   .graph-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 0.3rem;
+    padding-bottom: 1.5rem;
+    font-size: 1.2rem;
+   }
+   
+   
+   .graph-outer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+   
+   
+   .graph-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* height: 19rem; */
+    width: 26rem;
+    margin-bottom: 0rem;
+    padding: 0rem 0.5rem 0.6rem 1rem;
+   }
+   
+   
+   /*Charts section*/
+   
+   
+   /* .volChartBox {
+    min-width:0;
+   } */
+   
+   
+   .valChartCard {
+    margin-left: 0.5rem;
+   margin-right: 0.5rem;
+   }
+   
+   
+   .aspChartCard {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+   }
+   
+   
+   /*Table vol*/
+   
+   
+   .table-vol {
+    border: 1px solid;
+    font-family: Arial;
+    margin-bottom: 10rem;
+    border-collapse: collapse;
+    width: 23rem;
+    height: 11.8rem;
+    font-size: 0.9rem;
+   
+   
+   }
+   
+   
+   .table-body-vol {
+    font-weight: 100;
+   }
+   
+   
+   .table-vol td {
+    border: 1px solid;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0.1rem 0.4rem 0.1rem 0.4rem;
+   }
+   
+   
+   td:nth-child(1) {
+    font-weight: 700;
+   }
+   
+   
+   td:nth-child(2) {
+    background-color: #f1f4f4;
+   
+   
+   }
+   
+   
+   td:nth-child(3) {
+    background-color: #fdc640;
+   
+   
+   }
+   
+   
+   td:nth-child(4) {
+    background-color: #69e2ff;
+   }
+   
+   
+   /*Table val*/
+   
+   
+   .table-val {
+    border: 1px solid;
+    font-family: Arial;
+    margin-bottom: 10rem;
+    border-collapse: collapse;
+    width: 23rem;
+    height: 11.8rem;
+    font-size: 0.9rem;
+   
+   
+   }
+   
+   
+   .table-val td {
+    border: 1px solid;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0.1rem 0.4rem 0.1rem 0.4rem;
+   }
+   
+   
+   .table-body-val {
+    font-weight: 100;
+   }
+   
+   
+   
+   
+   /*Table asp*/
+   
+   
+   .table-asp {
+    border: 1px solid;
+    font-family: Arial;
+    margin-bottom: 10rem;
+    border-collapse: collapse;
+    width: 23rem;
+    height: 11.8rem;
+    font-size: 0.9rem;
+   }
+   
+   
+   .table-asp td {
+    border: 1px solid;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0.1rem 0.4rem 0.1rem 0.4rem;
+   }
+   
+   
+   .table-body-asp {
+    font-weight: 100;
+   }
+   
+   
+   /*General classes for styling all charts*/
+   
+   
+   .chart-card-writing {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* margin-top: -1rem; */
+    margin-top: 0;
+    font-size: 1.2rem;
+   
+   
+   }
+   
+   
+   .chart-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* height: 18rem; */
+    width: 26rem;
+    /* padding-bottom: 3.3rem;
+    padding-top: 4rem; */
+    /* padding: 1.8rem 0.1rem 0rem 0.1rem; */
+    min-width: 0;
+     
+   }
+   
+   
+   .chart-box {
+    padding-top: 0.5rem
+   }
+   
+   
+   .table-div {
+    overflow-x: auto;
+    margin-bottom: 0;
+   }
+   
+   
+   
+   
+   /*Product recommendation page*/
+   
+   
+   .product-recommendations-title, .marketed-examples-title{
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 0;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+   }
+   
+   
+   .product-recommendations-main-page-container {
+    display: flex;
+    flex-direction: row;
+    /* background-color: #69e2ff; */
+   }
+   
+   
+   /* .product-recommendations-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: greenyellow;
+   
+   
+   } */
+   
+   
+   .product-recommendations-side-container {
+    display: flex;
+    flex-direction: column; 
+    flex: 1;
+    /* background-color: #69e2ff; */
+    margin-left: 2rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+   }
+   
+   
+   .medicine-picture-and-writing-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+   
+   
+    }
+   
+   
+   .medicine-container {
+    background-color: #e5e3eb;
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid grey 2px;
+   }
+   /* .medicine-container:nth-child(odd) {
+    background-color: #e5e3eb;
+   } */
+   
+   
+   .medicine-picture-box {
+    padding: 0 2rem 0 2rem;
+   }
+   
+   
+   /* .medicine-pic {
+    max-height: 9rem;
+    height: 100%;
+    width: 100%;
+   } */
+   
+   
+   .medicine-pic1 {
+    max-width: 13rem;
+    height: 100%;
+    width: 100%;
+   }
+   
+   
+   .medicine-pic2 {
+    max-height: 8rem;
+    height: 100%;
+    width: 100%;
+   }
+   
+   
+   .medicine-pic3 {
+    max-width: 8rem;
+    height: 100%;
+    width: 100%;
+   }
+   
+   
+   .medicine-pic4 {
+    max-width: 9rem;
+    height: 100%;
+    width: 100%;
+   }
+   
+   
+   .medicine-pic5 {
+    max-height: 10rem;
+    height: 100%;
+    width: 100%;
+   }
+   
+   
+   .medicine-title {
+    font-size: 1.1rem;
+    line-height: 0.5rem;
+    }
+   
+   
+   .pr-medicine-picture-container5 {
+    margin-right: 1.5rem;
+   }
+   
+   
+   
+   
+   .medicine-writing-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 22rem;
+   /* padding: 0.5rem; */
+   /* flex: 1 1 100%; */
+   }
+   
+   
+   .pr-medicine-writing-container5 {
+    padding-right: 1.5rem;
+   }
+   
+   
+   .pr-title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   }
+   
+   
+   .marketed-examples-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0.5rem 1.5rem 0rem 1.5rem;
+    align-items: center;
+    padding-bottom: 1rem;
+    /* flex-grow: 1; */
+    /* background-color: #fdc640; */
+   }
+   
+   
+   /* .marketed-examples-title-container {
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+   
+   
+   
+   
+   } */
+   
+   
+   .marketed-examples-title{
+    align-self: flex-start;
+   }
+   
+   
+   .wrapper-main-medicine-image{
+    max-width: 100%;
+   }
+   
+   
+   .medicine-image-large {
+    max-width: 300px;
+    width: 100%;
+   }
+   
+   
+   .medicine-name {
+    font-size: 1rem;
+   }
+   
+   
+   .medicine-bottom-bar {
+    background-color: #7f89c1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    /* height: 1.4rem; */
+   }
+   
+   
+   .medicine-left-logo-container {
+    border-right: 0.1rem solid;
+    width: 100%;
+    /* border-style: solid; */
+    border-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    /* justify-content: center; */
+    align-items: center;
+    /* padding-top: 0.2rem; */
+    padding-right: 2.2rem;
+   }
+   
+   
+   .medicine-right-logo-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-grow: 1;
+    /* justify-content: center; */
+    align-items: center;
+    /* padding-top: 0.2rem; */
+    padding-right: 2rem;
+   }
+   
+   
+   
+   
+   .medicine-bottom-bar-image {
+    height: 1rem;
+    width: 1.6rem;
+    padding: 0.9rem;
+    justify-content: center;
+   }
+   
+   
+   .icon-writing {
+    font-size: 1rem;
+    line-height: 0.5rem;
+   }
+   
+   
+   /*Legend bottom info*/
+   
+   
+   .legend-bottom-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+   
+   }
+   
+   
+   /* .border {
+    border-style: solid;
+    border-color: black;
+    border-width: 1rem;
+   } */
+   
+   
+   /*Tutorial Section*/
+   
+   
+   /*Tutorial speech bubbles section*/
+   .tutorial-speech-bubbles-main-container {
+    background-color: red;
+    height: 100vh;
+    width: 100vw;
+    z-index:100;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+   }
+   
+   
+   .speech-bubble-container1 {
+    background-color: #fdc640;
+    visibility: visible;
+    /* position: relative; */
+   }
+   
+   
+   .speech-bubble-container2 {
+    /* background-color: pink; */
+    visibility: visible;
+   
+   
+   }
+   
+   
+   .speech-bubble-container3 {
+    /* background-color: #73e6ff; */
+    visibility: visible;
+   }
+   
+   
+   .speech-bubble-container4 {
+    /* background-color:#8b8bff; */
+    visibility: visible;
+   }
+   
+   
+   .speech-bubble-button {
+    background-color: #4f5ca4;
+    border-style: none;
+    color: white;
+    border-radius: 5px;
+    width: 5rem;
+    height: 2rem;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    /* box-shadow: 0 8px 32px 0 grey; */
+   
+   
+   }
+   
+   
+   .speech-bubble-button1 {
+    background-color: white;
+    border-style: none;
+    color: #4f5ca4;
+    border-radius: 5px;
+    width: 5rem;
+    height: 2rem;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    font-weight: 800;
+    margin: 0.5rem;
+    /* box-shadow: 0 8px 32px 0 grey; */
+   
+   
+   }
+   
+   
+   .dismiss-button {
+    background-color: #4f5ca4;
+    border-style: none;
+    color: white;
+    border-radius: 5px;
+    width: 5rem;
+    height: 2rem;
+    border-style: solid;
+    border-color: white;
+    border-width: 0.5px;
+    /* margin: 0.5rem; */
+   
+   
+    }
+   
+   
+   /* .show-tutorial-button-container {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+   } */
+   
+   
+   .show-tutorial {
+    cursor: pointer;
+    background-color: #4f5ca4;
+    border-style: none;
+    color: white;
+    border-radius: 10px;
+    /* width: 5rem;
+    height: 2rem; */
+    padding: 1rem;
+    margin: 0.2rem;
+   }
+   
+   
+   
+   
+   .speech-bubble-writing {
+    color: white;
+    font-size: 0.9rem;
+   }
+   
+   
+   .tutorial-button-container {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: flex-end; */
+   }
+   
+   
+   /*Speech bubble 1*/
+   
+   
+   .speech-bubble1 {
+    /* visibility: visible; */
+     position: absolute;
+     width: 20rem;
+     /* height: 120px; */
+     top: 0.1rem; right: 23.5rem;
+     padding: 1.5rem 1rem 1.5rem 1.5rem;
+     background: #4f5ca4;
+     -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+     border-radius: 10px;
+      /* border: #000000 solid 3px; */
+   }
+   
+   
+   .speech-bubble1:after
+   {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 20px 0 20px 30px;
+      border-color: transparent #4f5ca4;
+      display: block;
+      width: 0;
+      z-index: 1;
+      right: -12px;
+      top: 21px;
+   }
+   
+   
+   .speech-bubble1:before
+   {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 22px 0 22px 32px;
+      border-color: transparent #4f5ca4;
+      display: block;
+      width: 0;
+      z-index: 0;
+      right: -17px;
+      top: 19px;
+   }
+   
+   
+   /*Speech bubble 2*/
+   
+   
+   
+   
+   .speech-bubble2 {
+    /* visibility: visible; */
+    position: absolute;
+    width: 20rem;
+    height: 5rem;
+    top: 3rem; right: 55rem;
+     padding: 1rem 2rem 2.5rem 2rem;
+     background: #4f5ca4;
+     -webkit-border-radius: 18px;
+     -moz-border-radius: 18px;
+     border-radius: 18px;
+      /* border: #000000 solid 3px; */
+   }
+   
+   
+   .speech-bubble2:after
+   {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 30px 20px 0;
+      border-color: #4f5ca4 transparent;
+      display: block;
+      width: 0;
+      z-index: 1;
+      left: 105px;
+      bottom: -12px;
+   }
+   
+   
+   .speech-bubble2:before
+   {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 32px 22px 0;
+      border-color: #4f5ca4 transparent;
+      display: block;
+      width: 0;
+      z-index: 0;
+      left: 103px;
+      bottom: -17px;
+   }
+   
+   
+   /*Speech bubble 3*/
+   
+   
+   .speech-bubble3 {
+    /* visibility: visible; */
+    position: absolute;
+    width: 20rem;
+    top: 3.5rem; right: 23rem;
+     padding: 1rem 1rem 1.5rem 1rem;
+     background: #4f5ca4;
+     -webkit-border-radius: 18px;
+     -moz-border-radius: 18px;
+     border-radius: 18px;
+      /* border: #000000 solid 3px; */
+   }
+   
+   
+   .speech-bubble3:after
+   {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 20px 0 20px 30px;
+      border-color: transparent #4f5ca4;
+      display: block;
+      width: 0;
+      z-index: 1;
+      /* right: -30px;
+      top: 59px; */
+      right: -10px;
+      top: 100px;
+   }
+   
+   
+   .speech-bubble3:before
+   {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 22px 0 22px 32px;
+      border-color: transparent #4f5ca4;
+      display: block;
+      width: 0;
+      z-index: 0;
+      /* right: -35px;
+      top: 57px; */
+      right: -15px;
+      top: 98px;
+   }
+   
+   
+   /*Speech bubble 4*/
+   
+   
+   .speech-bubble4 {
+    /* visibility: visible; */
+    position: absolute;
+    width: 20rem;
+    top: 13.5rem; right: 23.2rem;
+       padding: 1rem;
+       background: #4f5ca4;
+       -webkit-border-radius: 18px;
+       -moz-border-radius: 18px;
+       border-radius: 18px;
+        /* border: #000000 solid 3px; */
+    }
+     .speech-bubble4:after
+    {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 20px 0 20px 30px;
+        border-color: transparent #4f5ca4;
+        display: block;
+        width: 0;
+        z-index: 1;
+        /* right: -30px;
+        top: 59px; */
+        right: -10px;
+        top: 20px;
+    }
+     .speech-bubble4:before
+    {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 22px 0 22px 32px;
+        border-color: transparent #4f5ca4;
+        display: block;
+        width: 0;
+        z-index: 0;
+        /* right: -35px;
+        top: 57px; */
+        right: -15px;
+        top: 18px;
+    }
+   
+   
+   
+   
+   /*Speech bubble 5*/
+   .speech-bubble5 {
+    /* visibility: visible; */
+    position: absolute;
+    width: 20rem;
+    top: 17.5rem; left: 15rem;
+     padding: 1rem 1rem 2rem 2rem;
+     background: #4f5ca4;
+     -webkit-border-radius: 18px;
+     -moz-border-radius: 18px;
+     border-radius: 18px;
+      /* border: #000000 solid 3px; */
+   }
+   
+   
+   .speech-bubble5:after
+   {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 30px 20px 0;
+      border-color: #4f5ca4 transparent;
+      display: block;
+      width: 0;
+      z-index: 1;
+      bottom: -10px;
+      left: 105px;
+   }
+   
+   
+   .speech-bubble5:before
+   {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 32px 22px 0;
+      border-color: #4f5ca4 transparent;
+      display: block;
+      width: 0;
+      z-index: 0;
+      bottom: -15px;
+      left: 103px;
+   }
+   
+   
+   
+   
+    /*GENERAL CLASSES*/
+   
+   
+    .hidden {
+      display: none;
+    }
+    /*Class used for styling all large sized titles in the top box*/
+    .title {
+      font-size: 1.3rem;
+      word-break: normal;
+      line-height: 0.1rem;
+    }
+   
+   
+   /*Class for styling all the smaller sized titles in the top box together*/
+   .sub-title {
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1.5rem;
+   }
+   
+   
+   
+   
+   /* Media Queries*/
+   @media screen and (min-width: 1850px) {
+    .speech-bubble2 {
+      top: 9rem; right: 90rem;
+    }
+    .pr-medicine-picture-container1 {
+      padding-right: 0.8rem;
+    }
+    .pr-medicine-picture-container3 {
+      padding-right: 5.8rem;
+    }
+    .pr-medicine-picture-container4 {
+      padding-right: 4.8rem;
+    }
+    .pr-medicine-picture-container5 {
+      padding-right: 1rem;
+    }
+   }
+   
+   
+   @media screen and (max-width: 1840px) {
+    .speech-bubble2 {
+      top: 9rem; left: 45rem;
+    }
+   }
+   
+   
+   @media screen and (max-width: 1600px) {
+    .speech-bubble2 {
+      top: 2.5rem; left: 33rem;
+    }
+   }
+   
+   
+   
+   
+   @media screen and (min-width:1600px) {
+   
+   
+    .icon-writing {
+      font-size: 1.5rem;
+    }
+   
+   
+    .graph-title {
+      font-size: 1.7rem;
+    }
+    .chart-card-writing {
+      font-size: 1.7rem;
+      padding-bottom: 1rem;
+   
+   
+    }
+    .graph-card {
+      height: 13.5rem;
+    }
+    .chart-card {
+      height: 13.5rem;
+    }
+   
+   
+    .main-title {
+      font-size: 2.8rem;
+    }
+    .title {
+      font-size: 2rem;
+     
+    }
+    .sub-title {
+      font-size: 1.8rem;
+    }
+    .red-button {
+      width: 22rem;
+      height: 5rem;
+      font-size: 1.7rem;
+      border-radius: 16px;
+      border: solid;
+      border-width: 0.3rem;
+    }
+    .button-purple {
+      height: 5rem;
+      width: 9.5rem;
+      margin: 1rem 0.7rem 0.5rem 0rem;
+      border-radius: 16px;
+    }
+    .image {
+      width: 2.7rem;
+    }
+    .medicine-selector {
+      width: 35rem;
+      height: 3rem;
+      margin: 1rem 1rem 1rem 0;
+    }
+   
+   
+    p.medicine-name {
+      font-size: 1.7rem;
+    }
+    /* img.medicine-pic {
+      width: 16rem;
+    } */
+    img.medicine-image-large {
+      max-width: 350px;
+      width: 100%;
+    }
+    .graph-caption {
+      font-size: 1.2rem;
+    }
+    .legend-writing.lhs-legend-writing {
+      font-size: 1.2rem;
+    }
+    .legend-writing.year-writing {
+      font-size: 1.2rem;
+    }
+    .button-titles {
+      font-size: 1.3rem;
+    }
+   .buttons-section-red {
+    margin-top: 1.6rem;
+    margin-bottom: 0.5rem;
+   }
+   .marketed-examples-container {
+    padding-bottom: 0;
+   }
+   .speech-bubble3 {
+    top: 9rem; right: 28rem;
+   }
+   .speech-bubble4 {
+    top: 22rem; right: 28rem;
+   }
+   .speech-bubble5 {
+    top: 28.5rem; left: 30rem;
+   }
+   .speech-bubble1 {
+    top: 1rem; right: 39.5rem;
+   }
+   
+   
+   }
+   
+   
+   
+   
+   
+   
+   @media screen and (max-width:1500px) {
+   
+   
+    .graph-title {
+      font-size: 1.3rem;
+    }
+    .chart-card-writing {
+      font-size: 1.3rem;
+   
+   
+    }
+    .graph-caption {
+      font-size: 1rem;
+    }
+    .graph-caption-container-1 {
+      display: none;
+    }
+    .graph-caption-container-3 {
+      display: none;
+    }
+    .graph-caption-container-2 {
+      margin-left: 1rem;
+    }
+   
+   
+   }
+   
+   
+   @media only screen and (max-width: 1373px)
+   {
+    .speech-bubble5 {
+      top: 17.5rem; left: 22rem;
+    }
+   }
+   
+   
+   @media only screen and (max-width: 1260px) {
+    .speech-bubble2 {
+      top: 2.5rem; left: 28rem;
+    }
+   }
+   
+   
+   
+   
+   @media only screen   and (max-width: 1200px) {
+    .pr-medicine-picture-container1 {
+      padding-right: 0.8rem;
+    }
+    .pr-medicine-picture-container3 {
+      padding-right: 5.8rem;
+    }
+    .pr-medicine-picture-container4 {
+      padding-right: 4.8rem;
+    }
+    .pr-medicine-picture-container5 {
+      padding-right: 1rem;
+    }
+   
+   
+    .buttons-section-red {
+      flex-direction: column;
+    }
+    /* .legend-bottom-spacer {
+      display: none;
+    
+    } */
+    .legend-bottom-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .product-recommendations-main-page-container {
+      flex-direction: column;
+    }
+    /* img.medicine-pic {
+      width: 16rem;
+    } */
+    .product-recommendations-main-page-container {
+      margin-right: 1rem;
+    }
+    .speech-bubble2 {
+      top: 2.5rem; left: 7rem;
+    }
+    .speech-bubble5 {
+      top: 24rem; left: 7rem;
+    }
+   }
+   
+   
+   @media only screen and (max-width: 1050px) {
+    .speech-bubble2 {
+      bottom: 19rem; right: 30rem;
+    }
+   }
+   
+   
+   @media only screen and (max-width: 930px) {
+    .speech-bubble5 {
+      top: 24rem; left: 12rem;
+    }
+   }
+   
+   
+   @media only screen and (max-width: 900px) {
+    .speech-bubble2 {
+      bottom: 19rem; right: 22rem;
+    }
+   }
+   
+   
+   
+   
+   @media screen and (max-width: 853px) {
+    .speech-bubble3 {
+      /* visibility: visible; */
+      position: absolute;
+      width: 20rem;
+      top: 20.5rem; left: 3rem;
+       padding: 1rem 1rem 2rem 1rem;
+       background: #4f5ca4;
+       -webkit-border-radius: 18px;
+       -moz-border-radius: 18px;
+       border-radius: 18px;
+        /* border: #000000 solid 3px; */
+    }
+     .speech-bubble3:after
+    {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 30px 20px 0;
+        border-color: #4f5ca4 transparent;
+        display: block;
+        width: 0;
+        z-index: 1;
+        top: 9.5rem;
+        left: 10px;
+    }
+     .speech-bubble3:before
+    {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 32px 22px 0;
+        border-color: #4f5ca4 transparent;
+        display: block;
+        width: 0;
+        z-index: 0;
+        top: 9.4rem;
+        left: 8px;
+    }
+    .speech-bubble4 {
+      /* visibility: visible; */
+      position: absolute;
+      width: 20rem;
+      top: 21rem; left: 3rem;
+       padding: 1rem;
+       background: #4f5ca4;
+       -webkit-border-radius: 18px;
+       -moz-border-radius: 18px;
+       border-radius: 18px;
+        /* border: #000000 solid 3px; */
+    }
+     .speech-bubble4:after
+    {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 30px 20px 0;
+        border-color: #4f5ca4 transparent;
+        display: block;
+        width: 0;
+        z-index: 1;
+        top: 8.5rem;
+        left: 10px;
+    }
+     .speech-bubble4:before
+    {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 32px 22px 0;
+        border-color: #4f5ca4 transparent;
+        display: block;
+        width: 0;
+        z-index: 0;
+        top: 8.7rem;
+        left: 8px;
+    }
+    .speech-bubble5 {
+      top: 24rem; left: 12rem;
+    }
+   }
+   
+   
+   @media screen and (max-width: 800px) {
+    .medicine-picture-and-writing-wrapper{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 0 0 0;
+    }
+    .medicine-container {
+      flex-direction: column;
+    }
+    .medicine-writing-box {
+      justify-content: center;
+    }
+    .medicine-name {
+      font-size: 1.2rem;
+    }
+    .medicine-title {
+      font-size: 1.5rem;
+    }
+    .medicine-picture-box {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 0 0 0 0;
+    }
+    .medicine-pic {
+      max-width: 10rem;
+    }
+    .graph-caption-wrapper {
+      flex-direction: column-reverse;
+      height: 15rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .speech-bubble5 {
+      top: 51.5rem; left: 12rem;
+    }
+   
+   
+   }
+   
+   
+   @media screen and (max-width: 780px) {
+    }
+   
+   
+   
+   
+    @media screen and (max-width: 760px) {
+      .buttons-section-red {
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+      }
+      .top-two-containers {
+        flex-direction: column;
+      }
+      .medicine-selector {
+        margin-bottom: 2rem;
+      }
+      .title {
+        text-wrap: wrap;
+        line-height: 2rem;;
+      }
+      .img.medicine-pic {
+        width: 6rem;
+      }
+      .medicine-writing-box {
+        padding-right: 1rem;
+      }
+      .product-recommendations-side-container {
+        flex-direction: column;
+      }
+      .speech-bubble1 {
+    /* visibility: visible; */
+     position: absolute;
+     width: 20rem;
+     /* height: 120px; */
+     top: 6rem; right: 10rem;
+     padding: 1rem;
+     background: #4f5ca4;
+     -webkit-border-radius: 18px;
+     -moz-border-radius: 18px;
+     border-radius: 18px;
+      /* border: #000000 solid 3px; */
+   }
+   
+   
+   .speech-bubble1:after
+   {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 0 20px 30px;
+      border-color: #4f5ca4 transparent;
+      display: block;
+      width: 0;
+      z-index: 1;
+      top: -10px;
+      left: 105px;
+   }
+   
+   
+   .speech-bubble1:before
+   {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 0 22px 32px;
+      border-color: #4f5ca4 transparent;
+      display: block;
+      width: 0;
+      z-index: 0;
+      top: -15px;
+      left: 103px;
+   }
+   .speech-bubble2 {
+    top: 9.5rem; right: 6rem;
+   }
+   .speech-bubble3 {
+    top: 31.5rem; left: 3rem;
+      }
+      .speech-bubble4 {
+        top: 32rem; left: 3rem;
+    }
+    .speech-bubble5 {
+      top: 62.5rem; left: 8rem;
+    }
+   
+   
+   
+   
+   
+   
+   @media screen and (max-width:600px) {
+    .medicine-selector {
+      width: 20rem;
+    }
+    .device-and-view {
+      margin-top: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .speech-bubble2 {
+      top: 16rem; right: 6rem;
+    }
+    .speech-bubble3 {
+      top: 41.5rem; left: 3rem;
+        }
+        .speech-bubble4 {
+          top: 42rem; left: 3rem;
+      }
+      .speech-bubble5 {
+        top: 72.5rem; left: 8rem;
+      }
+      .speech-bubble1 {
+        top: 6rem; right: 2.5rem;
+      }
+   } 
+    }
+   
+   
+    @media screen and (max-width:560px) {
+   
+   
+      .speech-bubble3 {
+        top: 43rem; left: 3rem;
+          }
+          .speech-bubble5 {
+            top: 74.5rem; left: 3rem;
+          }
+          .speech-bubble2 {
+            top: 15rem; right: 2rem;
+            padding: 2rem 2rem 2.5rem 2rem;
+          }
+          .speech-bubble4 {
+            top: 44rem; left: 3rem;
+          }
+    }
+   
+   
+    @media screen and (max-width:541px) {
+      .speech-bubble2 {
+        top: 17rem; left: 3rem;
+      }
+    }
+   
+   
+    @media screen and (max-width:480px) {
+        .speech-bubble3 {
+          /* visibility: visible; */
+          position: absolute;
+          width: 10rem;
+          top: 40rem; left: 3rem;
+           padding: 2rem;
+           background: #4f5ca4;
+           -webkit-border-radius: 18px;
+           -moz-border-radius: 18px;
+           border-radius: 18px;
+            /* border: #000000 solid 3px; */
+        }
+       
+        .speech-bubble3:after
+        {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 30px 20px 0;
+            border-color: #4f5ca4 transparent;
+            display: block;
+            width: 0;
+            z-index: 1;
+            top: 12.8rem;
+            left: 10px;
+        }
+       
+        .speech-bubble3:before
+        {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 32px 22px 0;
+            border-color: #4f5ca4 transparent;
+            display: block;
+            width: 0;
+            z-index: 0;
+            top: 12.8rem;
+            left: 8px;
+        }
+        .speech-bubble5 {
+          width: 10rem;
+          top: 72rem; left: 3rem;
+          padding: 1rem;
+        }
+       
+       
+          }
+   
+   

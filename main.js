@@ -79,7 +79,7 @@ fetchData("https://run.mocky.io/v3/1cf82fc8-2346-4bfb-a2dd-6927e40db821").then(m
   })
 
   //Providing default dropdown value on page load
-  moleculeSelector.value = "ADALIMUMAB";
+  moleculeSelector.value = "ABBA";
   //Calling the function for second fetch on page load - with above default value
 
   checkIDAndFetchMainData(moleculeSelector.value);

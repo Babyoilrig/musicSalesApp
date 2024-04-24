@@ -1669,7 +1669,7 @@ function showCorrectDataAndHighlightCorrectButtons(data, volume, value, asp) {
 
       if (prodRecsButton.classList.contains('clicked-purple')) {
         prodRecsButton.classList.remove('clicked-purple');
-        syringeImage.src = "./syringe_purple.png";
+        syringeImage.src = "./musicnote_purple.png";
       }
       
       //Hide product recommendations content
@@ -1682,7 +1682,7 @@ function showCorrectDataAndHighlightCorrectButtons(data, volume, value, asp) {
     function clickedProductRecsButton() {
       //Changing button to purple and changing image
       this.classList.add('clicked-purple');
-      syringeImage.src = "./syringe_white.png";
+      syringeImage.src = "./musicnote_white.png";
 
       //'Disabling' top buttons 
       pfsButton.classList.remove('clicked-red');

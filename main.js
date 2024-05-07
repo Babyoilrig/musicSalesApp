@@ -67,6 +67,7 @@ let beginningAndEndingValuesThreeDevicesVal;
 showTutorialOnFirstVisit();
 
 fetchData("https://run.mocky.io/v3/1cf82fc8-2346-4bfb-a2dd-6927e40db821").then(moleculeData => {
+  // fetchData("https://eu-west-2.aws.data.mongodb-api.com/app/data-ykuxrvk/endpoint/data/v1").then(moleculeData => {
 
   //Dynamically input names and ids from first fetch into selector dropdown menu
 

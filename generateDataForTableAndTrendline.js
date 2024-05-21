@@ -4,21 +4,27 @@
 import { get } from "lodash-es";
 
 
-
 function checkDataExistsAndFindData(passedData, region, year, measurement) {
- if(!passedData) {
+if(!passedData) {
   return 0;
 } else if (!passedData.region[region]){
  return 0;
 } else {
  const foundData = get(passedData.region[region][measurement].find(item => item.year === year), "value", '')
+ // console.log(foundData);
  return foundData;
 }
 }
 
 
-export function transformData({containers}, primaryContainer, measurement) {
+
+
+export function createSingularDatasetForTablesAndTrendlines({containers}, primaryContainer, measurement) {
  const passedData = containers.find(item => item.primaryContainer === primaryContainer);
+
+
+ //Here will need to put in the same if statement as is in generateGraphData - wbut need to make sure it is getting passed
+ //everything it needs
 
 
    return {
@@ -67,7 +73,7 @@ export function transformData({containers}, primaryContainer, measurement) {
 }
 
 
-export function combineDataTwoDatasets(dataset1, dataset2){
+export function combineDataTwoDatasetsForTablesAndTrendlines(dataset1, dataset2){
    return {
      labelsTop: ["2021", "2022", "2023"],
       datasets: [
@@ -108,7 +114,7 @@ export function combineDataTwoDatasets(dataset1, dataset2){
      ]
    }
  }
-  export function combineDataThreeDatasets(dataset1, dataset2, dataset3){
+  export function combineDataThreeDatasetsForTablesAndTrendlines(dataset1, dataset2, dataset3){
    return {
      labelsTop: ["2021", "2022", "2023"],
       datasets: [
@@ -160,3 +166,12 @@ export function find2023DataforForcasted({containers}, primaryContainer, measure
 
 
  }
+
+
+
+
+
+
+
+
+

@@ -1,8 +1,28 @@
+
+  
+
+
 import calculateCAGR from './cagr';
 import { checkIfString } from './Utilities';
 
 
-export function findBeginningValuesForCAGRFunction(transformedData, metric) {
+export function findSingularBeginningAndEndingValuesforCAGR() {
+   beginningAndEndingValuesPfsVol = generateDataforTrendlineOneDevice('Prefilled Syringe', 'vol');
+   beginningAndEndingValuesPfsVal = generateDataforTrendlineOneDevice('Prefilled Syringe', 'val');
+   beginningAndEndingValuesPfsAsp = generateDataforTrendlineOneDevice('Prefilled Syringe', 'asp');
+  
+    //Getting trendline data for Daij
+   beginningAndEndingValuesDaijVol = generateDataforTrendlineOneDevice('Disposable autoinjector', 'vol');
+   beginningAndEndingValuesDaijVal = generateDataforTrendlineOneDevice('Disposable autoinjector', 'val');
+   beginningAndEndingValuesDaijAsp = generateDataforTrendlineOneDevice('Disposable autoinjector', 'asp');
+    //Getting trendline data for Dp
+   beginningAndEndingValuesDpVol = generateDataforTrendlineOneDevice('Disposable pens', 'vol');
+   beginningAndEndingValuesDpVal = generateDataforTrendlineOneDevice('Disposable pens', 'val');
+   beginningAndEndingValuesDpAsp = generateDataforTrendlineOneDevice('Disposable pens', 'asp');
+ }
+
+
+export function findBeginningValuesForCAGRFunction(transformedData, metric, device) {
    let aaaYear1;
    let europeYear1;
    let latinAmericaYear1;
@@ -72,7 +92,6 @@ export function findBeginningValuesForCAGRFunction(transformedData, metric) {
        //For val and asp - it will be an empty array
       
        beginningValuesAndCheckFirstDataPoint.push(beginningValues, checkIfFirstDataPointIsZero);
-  
        return beginningValuesAndCheckFirstDataPoint;
       
 
@@ -112,3 +131,33 @@ export function findBeginningValuesForCAGRFunction(transformedData, metric) {
        return endingValues;
    }
   
+ 
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

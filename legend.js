@@ -1,4 +1,7 @@
-export function showLegend(volume, device, colourValues) {
+//THE triangles legend is not working - need to fix this
+
+
+export function showLegend(volume, device, colours) {
     const getLegend = document.querySelector('.legend-wrapper');
     const getPfsLegendBox = document.querySelector('.pfs-legend-box');
     const getDaijLegendBox = document.querySelector('.daij-legend-box');
@@ -7,15 +10,13 @@ export function showLegend(volume, device, colourValues) {
     const getYearThreePartSquare = document.querySelectorAll('.year-threepart-square');
     getYearThreePartSquare.forEach(square => square.classList.add('hidden'));
     getTriangleSquares.forEach(square => square.classList.remove('hidden'));
-    const colour1 = colourValues.colour1;
-    const colour2 = colourValues.colour2;
-    const colour3 = colourValues.colour3;
-    const colour4 = colourValues.colour4;
-    const colour5 = colourValues.colour5;
-    const colour6 = colourValues.colour6;
-    const colour7 = colourValues.colour7;
-    const colour8 = colourValues.colour8;
-    const colour9 = colourValues.colour9;
+    const colour1 = colours.colour1;
+    const colour2 = colours.colour2;
+    const colour3 = colours.colour3;
+    const colour4 = colours.colour4;
+    const colour5 = colours.colour5;
+    const colour6 = colours.colour6;
+    // console.log(colour6);
     if (getLegend.classList.contains('hidden')) {
         getLegend.classList.remove('hidden');
     }
@@ -55,7 +56,6 @@ export function showLegend(volume, device, colourValues) {
         getYearThreePartSquare.forEach(square => square.classList.remove('hidden'));
         getTriangleSquares.forEach(square => square.classList.add('hidden'));
     }
-   
     //This section needs changing now - cos there are more combinations??
     document.querySelector('.first-triangle-top-left').style.borderTopColor = volume.data.datasets[colour1].backgroundColor;
     document.querySelector('.first-triangle-top-left').style.borderRightColor = volume.data.datasets[colour2].backgroundColor;
@@ -81,4 +81,38 @@ export function showLegend(volume, device, colourValues) {
     getLegend.classList.add('hidden');
    
  };
+ 
+ 
+ export function inputStaticColoursIntoLegend(volume) {
+    document.querySelector('.pfs-square-divider-1').style.backgroundColor = volume.data.datasets[0].backgroundColor;
+  document.querySelector('.pfs-square-divider-2').style.backgroundColor = volume.data.datasets[3].backgroundColor;
+  document.querySelector('.pfs-square-divider-3').style.backgroundColor = volume.data.datasets[6].backgroundColor;
+ 
+ 
+  //Legend Box - with 3 colors for daij
+  document.querySelector('.daij-square-divider-1').style.backgroundColor = volume.data.datasets[1].backgroundColor;
+  document.querySelector('.daij-square-divider-2').style.backgroundColor = volume.data.datasets[4].backgroundColor;
+  document.querySelector('.daij-square-divider-3').style.backgroundColor = volume.data.datasets[7].backgroundColor;
+ 
+ 
+  //Legend Box - with 3 colors for dp
+ 
+ 
+  document.querySelector('.dp-square-divider-1').style.backgroundColor = volume.data.datasets[2].backgroundColor;
+  document.querySelector('.dp-square-divider-2').style.backgroundColor = volume.data.datasets[5].backgroundColor;
+  document.querySelector('.dp-square-divider-3').style.backgroundColor = volume.data.datasets[8].backgroundColor;
+ 
+ 
+  //Putting colours into the three-part legend year boxes
+  document.querySelector('.year1-square-divider-1').style.backgroundColor = volume.data.datasets[0].backgroundColor;
+  document.querySelector('.year1-square-divider-2').style.backgroundColor = volume.data.datasets[1].backgroundColor;
+  document.querySelector('.year1-square-divider-3').style.backgroundColor = volume.data.datasets[2].backgroundColor;  
+   document.querySelector('.year2-square-divider-1').style.backgroundColor = volume.data.datasets[3].backgroundColor;
+  document.querySelector('.year2-square-divider-2').style.backgroundColor = volume.data.datasets[4].backgroundColor;
+  document.querySelector('.year2-square-divider-3').style.backgroundColor = volume.data.datasets[5].backgroundColor;
+   document.querySelector('.year3-square-divider-1').style.backgroundColor = volume.data.datasets[6].backgroundColor;
+  document.querySelector('.year3-square-divider-2').style.backgroundColor = volume.data.datasets[7].backgroundColor;
+  document.querySelector('.year3-square-divider-3').style.backgroundColor = volume.data.datasets[8].backgroundColor;    
+   }
+ 
  

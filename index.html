@@ -4,7 +4,7 @@
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
-   <title>Music Sales App</title>
+   <title>PSHarmony</title>
  </head>
  <body class="body">
    <script type="module">
@@ -16,7 +16,7 @@
 
      const passwordCheck = (prompt = "Please enter the password:") => {
        const password = window.prompt(prompt);
-       if(password !== "music2024") {
+       if(password !== "playbook2024") {
          passwordCheck("Incorrect password, please try again:");
      }
      else {
@@ -24,19 +24,19 @@
      }
       
      }
+     //To put password back on remove below if statement and also comment in line below (app).
      if(import.meta.env.MODE !== "development"){
        passwordCheck();
      }
-
    </script>
    <!-- <div class="app" style="display: none;"> -->
-    <div class="'app">
+     <div class="app">
              <!--Tutorial section-->
             
              <!--Tutorial speech bubbles section-->
              <div class="tutorial-speech-bubbles-main-container">
                <!--Speech bubble container 1-->
-                 <div class="speech-bubble-container1">
+                 <div>
                    <!--Speech bubble 5-->
                      <div class="speech-bubble5 hiding">
                        <p class="speech-bubble-writing">5. Click each graph to view the specific values for each geographical region and year</p>
@@ -46,19 +46,19 @@
                      </div>
                  </div>
                  <!--Speech bubble container 2-->
-                     <div class="speech-bubble-container2">
+                     <div>
                        <!--Speech bubble 2-->
                          <div class="speech-bubble2 hiding">
-                           <p class="speech-bubble-writing">2. Select one or multiple music format type(s) to view their market data, either independently or cumulatively</p>
+                           <p class="speech-bubble-writing">2. Select one or multiple device type(s) to view their market data, either independently or cumulatively</p>
                            <div class="tutorial-button-container"><button class="speech-bubble-button speech-bubble-button2 hidden" data-index="2">NEXT</button>
                            </div>
                          </div>
                      </div>
                      <!--Speech bubble container 3-->
-                           <div class="speech-bubble-container3">
+                           <div>
                              <!--Speech bubble 1-->
                                <div class="speech-bubble1 hiding">
-                                 <p class="speech-bubble-writing">1. Select the desired artist in the dropdown box</p>
+                                 <p class="speech-bubble-writing">1. Select the desired molecule in the dropdown box</p>
                                  <div class="tutorial-button-container-first">
                                    <button class="speech-bubble-button speech-bubble-button1 hidden" data-index="1">NEXT</button>
                                    <button class="dismiss-button speech-bubble-button">DISMISS</button>
@@ -66,16 +66,16 @@
                                </div>
                            </div>
                            <!--Speech bubble container 4-->
-                                   <div class="speech-bubble-container4">
+                                   <div>
                                      <!--Speech bubble 3-->
                                        <div class="speech-bubble3 hiding">
-                                         <p class="speech-bubble-writing">3. Select 'Market Data' to view sales volume, value and average selling price of formats for the artist</p>
+                                         <p class="speech-bubble-writing">3. Select 'Market Data' to view BD's sales volume, value and average selling price of device(s) for the molecule</p>
                                          <div class="tutorial-button-container"><button class="speech-bubble-button speech-bubble-button3" data-index="3">NEXT</button>
                                          </div>
                                        </div>
                                        <!--Speech bubble 4-->
                                        <div class="speech-bubble4 hiding">
-                                         <p class="speech-bubble-writing">4. Select 'Product Recommendations' to view formats suitable for the artist selected</p>
+                                         <p class="speech-bubble-writing">4. Select 'Product Recommendations' to view BD devices suitable for the molecule selected, and existing marketed combination product(s)</p>
                                          <div class="tutorial-button-container"><button class="speech-bubble-button speech-bubble-button4" data-index="4">NEXT</button>
                                          </div>
                                        </div>
@@ -90,43 +90,44 @@
                  <h1 class="main-title"></h1>
                    <div class="selector-container">
                      <select class="medicine-selector" disabled>
+                       <!-- <option class="medicine-selector-writing" value="ADALIMUMAB">Adalimumab</option> -->
                      </select>
                    </div>
                  </div>
                <div class="top-box">
                      <!--Container 1 - Contains titles and buttons on LHS of top box-->
-                     <div class="container-1">
+                     <div>
                            <!-- In box top titles -->
                            <div class="inside-main-box-titles">
                                  <div class="OBN">
-                                 <p class="title">RECORD COMPANY</p>
-                                 <p class="brand-name sub-title"></p>
+                                 <p class="brand-name title">ORIGINATOR BRAND NAME</p>
+                                 <p class="sub-title brand-name-subtitle"></p>
                                  </div>
                                      <div class="indication-container">
-                                       <P class="title">STYLE</P>
-                                       <p class="indication sub-title"></p>
+                                       <P class="indication title">INDICATION</P>
+                                       <p class="sub-title indication-sub-title"></p>
                                      </div>
                                         
                            </div>
                            <!-- Device and view -->
                            <div class="device-and-view">
-                             <p class="device title">MUSIC FORMAT</p>
+                             <p class="title">DEVICE</p>
                            </div>
 
 
                            <!-- Buttons section -->
                            <div class="buttons-section-red">
-                             <button class="prefilled-syringe clicked-red red-button" data-value="Prefilled Syringe">DOWNLOADS</button>
-                             <button class="disposable-autoinjector red-button" data-value="Disposable autoinjectors">VINYL</button>
+                             <button class="prefilled-syringe clicked-red red-button" data-value="Prefilled Syringe">PREFILLED SYRINGE</button>
+                             <button class="disposable-autoinjector red-button" data-value="Disposable autoinjectors">DISPOSABLE AUTOINJECTOR</button>
                              <!--NOTE - have removed class of button-red from disposable pen for now - so it doesn't work-->
-                             <button class="disposable-pen red-button" data-value="disposable pen">CD</button>
+                             <button class="disposable-pen red-button" data-value="disposable pen">DISPOSABLE PEN</button>
                            
                            </div>
                      </div>
                      <!--Container 2-->
                      <div class="container-2">
                        <div class="US-patent-expiry-container">
-                         <P class="title">LAST RELEASE DATE</P>
+                         <P class="title">US PATENT EXPIRY</P>
                          <p class="US-patent-expiry sub-title"></p>
                        </div>
                        <div class="device-and-view">
@@ -150,7 +151,7 @@
                            <p class="button-titles">Recommendations</p>
                          </div>
                          <button class="button-purple product-recommendations" data-value="product recommendations">
-                           <img class="syringe-image image" src="/musicnote_purple.png" alt="Syringe outline in white" width="25">
+                           <img class="syringe-image image" src="/syringe_purple.png" alt="Syringe outline in white" width="25">
                            </button>
                          </div>
                        </div>
@@ -163,28 +164,28 @@
                                     
                                      <!--Medicine LH pictures and writing-->
                                      <div class="medicine-picture-and-writing-wrapper">
-                                         <h2 class="product-recommendations-title medicine-title">Product recommendations:</h2>
+                                         <h2 class="product-recommendations-title medicine-title">BD's product recommendations:</h2>
                                          <div class="'border">
 
 
                                                <!--Medicine LH container 1-->
                                                <div class="medicine-container medicine-container1">
                                                    <div class="pr-medicine-picture-container1 medicine-picture-box">
-                                                   <img class="medicine-pic medicine-pic1" alt="medicine image" src="/video.png">
+                                                   <img class="medicine-pic medicine-pic1" alt="medicine image" src="/BD_Hypak_for_Biotech.png">
                                                    </div>
                                                    <div class="pr-medicine-writing-container1 medicine-writing-box">
-                                                       <p class="medicine-name">TEST 1</p>
+                                                       <p class="medicine-name">BD Hypak for Biotech</p>
                                                    </div>
                                                    <div class="medicine-bottom-bar medicine-bottom-bar1">
                                                      <div class="medicine-bottom-bar-container1 medicine-left-logo-container">
-                                                               <div><a href="www.google.com" target="_blank">
-                                                               <img class='medicine-bottom-bar-image' src="/Pamphlet.png"></a>
+                                                               <div><a href="https://bd.showpad.biz/webapp2/content/experiences/7ec411c9c738fcbd9b25c9df4704353c/5a0f7252a259b3574fee8b142263e6522320585e3238ead37497b9944d4e0625" target="_blank">
+                                                               <img class='medicine-bottom-bar-image' src='/Pamphlet.png'></a>
                                                                </div>
                                                                <div class="presentations-and-brochures icon-writing-container">
                                                                  <p class="icon-writing">Presentations/Brochures</p>
                                                                </div>
                                                      </div>  
-                                                     <div class="medicine-bottom-bar-container2 medicine-right-logo-container">
+                                                     <div class="medicine-bottom-bar-container2 medicine-right-logo-container hidden">
                                                                <div>
                                                                  <img class='medicine-bottom-bar-image hiding' src='/Video.png'>
                                                                </div>
@@ -197,16 +198,16 @@
                                                <!--Medicine LH container 2-->
                                                                    <div class="medicine-container medicine-container2">
                                                                        <div class="pr-medicine-picture-container2 medicine-picture-box">
-                                                                         <img class="medicine-pic medicine-pic2" alt="medicine image" src="">
+                                                                         <img class="medicine-pic medicine-pic2" alt="medicine image" src="/BD_Neopak.png">
                                                                        </div>
                                                                            <div class="pr-medicine-writing-container2 medicine-writing-box">
-                                                                           <p class="medicine-name">Test</p>
+                                                                           <p class="medicine-name">BD Neopak</p>
                                                                           
                                                                            </div>
                                                                            <div class="medicine-bottom-bar medicine-bottom-bar2">
                                                                              <div class="medicine-bottom-bar-container3 medicine-left-logo-container">
                                                                                      <div>
-                                                                                       <a href="www.google.com" target="_blank">
+                                                                                       <a href="https://bd.showpad.biz/webapp2/content/experiences/7ec411c9c738fcbd9b25c9df4704353c/aabc95cb5a94b8e4508d884d924916f3d8f50307dd5e56ce781bddff8f4b4b5e" target="_blank">
                                                                                        <img class='medicine-bottom-bar-image' src='/Pamphlet.png'></a>
                                                                                       
                                                                                      </div>
@@ -216,7 +217,7 @@
                                                                              </div>  
                                                                              <div class="medicine-bottom-bar-container4 medicine-right-logo-container">
                                                                                      <div>
-                                                                                       <a href="www.google.com​" target="_blank">
+                                                                                       <a href="https://bd.showpad.biz/webapp2/content/experiences/7ec411c9c738fcbd9b25c9df4704353c/1e54ca930f343eb459455413619e70f16a553c66b7aeea3f3fc505f1d33aa46a​" target="_blank">
                                                                                        <img class='medicine-bottom-bar-image' src='/Video.png'></a>
                                                                                       
                                                                                      </div>
@@ -231,15 +232,15 @@
                                                                        <!--Medicine LH container 3-->
                                                                        <div class="medicine-container medicine-container3">
                                                                                    <div class="pr-medicine-picture-container3 medicine-picture-box">
-                                                                                     <img class="medicine-pic medicine-pic3" alt="medicine image" src="/holder-image.png">
+                                                                                     <img class="medicine-pic medicine-pic3" alt="medicine image" src="/BD_Physioject.png">
                                                                                    </div>
                                                                                          <div class="pr-medicine-writing-container3 medicine-writing-box">
-                                                                                           <p class="medicine-name"></p>
+                                                                                           <p class="medicine-name">BD Physioject</p>
                                                                                           
                                                                                          </div><div class="medicine-bottom-bar medicine-bottom-bar3">
                                                                                            <div class="medicine-bottom-bar-container4 medicine-left-logo-container">
                                                                                                      <div>
-                                                                                                       <a href="www.google.com" target="_blank">
+                                                                                                       <a href="https://bd.showpad.biz/webapp2/content/experiences/7ec411c9c738fcbd9b25c9df4704353c/00ccef8392acdca0d832660ae5fae2eb651267527d47eb4248ef6aeed0c82cc8" target="_blank">
                                                                                                        <img class='medicine-bottom-bar-image' src='/Pamphlet.png'></a>
                                                                                                       
                                                                                                      </div>
@@ -249,7 +250,7 @@
                                                                                            </div>  
                                                                                            <div class="medicine-bottom-bar-container5 medicine-right-logo-container">
                                                                                                      <div>
-                                                                                                       <a href="www.google.com" target="_blank">
+                                                                                                       <a href="https://bd.showpad.biz/webapp2/content/experiences/7ec411c9c738fcbd9b25c9df4704353c/ad9f85ac7f34f483717a6132e82eff7e7ec3233205a4e678a94da9aa94e804ff" target="_blank">
                                                                                                        <img class='medicine-bottom-bar-image' src='/Video.png'></a>
                                                                                                       
                                                                                                      </div>
@@ -265,15 +266,15 @@
                                                                                <div class="medicine-container medicine-container4 hidden">
                                                                                  <div class="pr-medicine-picture-container4 medicine-picture-box">
                                                                             
-                                                                                 <img class="medicine-pic medicine-pic4" alt="medicine image" src="/holder-image.png">
+                                                                                 <img class="medicine-pic medicine-pic4" alt="medicine image" src="/BD_Vystra.png">
                                                                                  </div>
                                                                                  <div class="pr-medicine-writing-container4 medicine-writing-box">
-                                                                                     <p class="medicine-name">Test</p>
+                                                                                     <p class="medicine-name">BD Vystra</p>
                                                                                  </div>
                                                                                        <div class="medicine-bottom-bar medicine-bottom-bar4">
                                                                                          <div class="medicine-bottom-bar-container6 medicine-left-logo-container">
                                                                                       
-                                                                                                   <div><a href="www.google.com" target="_blank">
+                                                                                                   <div><a href="https://bd.showpad.biz/webapp2/content/experiences/7ec411c9c738fcbd9b25c9df4704353c/c9f853a49618473da2ff6f510663c05ed9fcc0ac8473c508d5fbe1f6f8079814" target="_blank">
                                                                                                    <img class='medicine-bottom-bar-image' src='/Pamphlet.png'></a>
                                                                                                    </div>
                                                                                                    <div class="presentations-and-brochures icon-writing-container">
@@ -283,7 +284,7 @@
                                                                                                  <div class="medicine-bottom-bar-container7 medicine-right-logo-container">
                                                                                                    <div>
                                                                                                     
-                                                                                                     <a href="www.google.com" target="_blank">
+                                                                                                     <a href="https://bd.showpad.biz/webapp2/content/experiences/7ec411c9c738fcbd9b25c9df4704353c/cf40863abe2247c6dd5b0618ff1069232835b50ca627101847d514c49925f463" target="_blank">
                                                                                                      <img class='medicine-bottom-bar-image' src='/Video.png'></a>
                                                                                                     
                                                                                                    </div>
@@ -298,22 +299,22 @@
                                                                                              <!--Medicine LH container 5-->
                                                                                                  <div class="medicine-container medicine-container5 hidden">
                                                                                                    <div class="pr-medicine-picture-container5 medicine-picture-box">
-                                                                                                   <img class="medicine-pic medicine-pic5 ultrasafe-plus-pic" alt="medicine image" src="/holder-image.png">
+                                                                                                   <img class="medicine-pic medicine-pic5 ultrasafe-plus-pic" alt="medicine image" src="/BD_Ultrasafe_Plus.png">
                                                                                                    </div>
                                                                                                    <div class="pr-medicine-writing-container5 medicine-writing-box">
-                                                                                                       <p class="medicine-name">Test</p>
+                                                                                                       <p class="medicine-name">BD UltraSafe Plus</p>
                                                                                                    </div>
                                                                                                    <div class="medicine-bottom-bar medicine-bottom-bar5">
                                                                                                      <div class="medicine-bottom-bar-container8 medicine-left-logo-container">
                                                                                                     
-                                                                                                               <div><a href="www.google.com" target="_blank">
+                                                                                                               <div><a href="https://bd.showpad.biz/webapp2/content/experiences/7ec411c9c738fcbd9b25c9df4704353c/8622758d1d45ba24e3c6c9623519333f2559983fa0e6895ca334dd6a83ea20e2" target="_blank">
                                                                                                                <img class='medicine-bottom-bar-image' src='/Pamphlet.png'></a>
                                                                                                                </div>
                                                                                                                <div class="presentations-and-brochures icon-writing-container">
                                                                                                                  <p class="icon-writing">Presentations/Brochures</p>
                                                                                                                </div>
                                                                                                      </div>  
-                                                                                                     <div class="medicine-bottom-bar-container9 medicine-right-logo-container">
+                                                                                                     <div class="medicine-bottom-bar-container9 medicine-right-logo-container hidden">
                                                                                                                <div><img class='medicine-bottom-bar-image hiding' src='/Video.png'>
                                                                                                                </div>
                                                                                                                <div class="videos icon-writing-container">
@@ -329,16 +330,16 @@
                                                                                                <!--Medicine LH container 6-->
                                                                                                                    <div class="medicine-container medicine-container6 hidden">
                                                                                                                      <div class="pr-medicine-picture-container6 medicine-picture-box">
-                                                                                                                     <img class="medicine-pic medicine-pic6" alt="medicine image" src="/holder-image.png">
+                                                                                                                     <img class="medicine-pic medicine-pic6" alt="medicine image" src="/BD_Evolve.png">
                                                                                                                      </div>
                                                                                                                      <div class="pr-medicine-writing-container6 medicine-writing-box">
-                                                                                                                         <p class="medicine-name">Test</p>
+                                                                                                                         <p class="medicine-name">BD Evolve</p>
                                                                                                                      </div>
                                                                                                                      <div class="medicine-bottom-bar medicine-bottom-bar6">
                                                                                                                        <div class="medicine-bottom-bar-container10 medicine-left-logo-container">
 
 
-                                                                                                                                 <div><a href="www.google.com" target="_blank">
+                                                                                                                                 <div><a href="https://bd.showpad.biz/webapp2/content/experiences/7ec411c9c738fcbd9b25c9df4704353c/17606bc242be11780cdf111856dac1bf989077236ca8e6af2a3369b9ccc2f19c" target="_blank">
                                                                                                                                  <img class='medicine-bottom-bar-image' src='/Pamphlet.png'></a>
                                                                                                                                  </div>
                                                                                                                                  <div class="presentations-and-brochures icon-writing-container">
@@ -348,7 +349,7 @@
                                                                                                                        <div class="medicine-bottom-bar-container11 medicine-right-logo-container">
                                                                                                                          <div>
                                                                                                                           
-                                                                                                                           <a href="www.google.com​" target="_blank">
+                                                                                                                           <a href="https://bd.showpad.biz/webapp2/content/experiences/7ec411c9c738fcbd9b25c9df4704353c/11b7f4abcc293c5e499bdfeaf095af0c2cc1d58c9fb3179232ce60ef66c25f39​" target="_blank">
                                                                                                                            <img class='medicine-bottom-bar-image' src='/Video.png'></a>
                                                                                                                           
                                                                                                                          </div>
@@ -377,7 +378,7 @@
                                      <h2 class="marketed-examples-title medicine-title">Marketed Examples:</h2>
                                    <!-- </div> -->
                                    <!-- <div class="wrapper-main-medicine-image"> -->
-                                   <img class="medicine-image-large" alt="medicine image" src="/holder-image.png">
+                                   <img class="medicine-image-large" alt="medicine image" src='/ABATACEPT.png'>
                                  <!-- </div> -->
                                  <p class="device-name medicine-name"></p>
                                  </div>
@@ -397,7 +398,7 @@
                        <!--Spacing container below-->
                              <div class="graph-caption-container-1 hiding">*************</div>
                              <!--Title container below-->
-                             <div class="graph-caption-container-2"><h2 class="graph-caption">Graphs/charts showing sales data (volume, value and asp by geographical region). Hover over the bars or click the charts to view specific values</h2></div>
+                             <div class="graph-caption-container-2"><h2 class="graph-caption">Hover over the bars or click the charts to view specific values</h2></div>
                      </div>
                        <div class="graph-subtitle-section2">
                        <!--Spacing container below-->
@@ -415,7 +416,7 @@
                                      <div class="graph-container1 graph-card" data-value="vol-graph">
                                        <!-- <div class="hover-caption">Hover over bars to view specific values</div> -->
                                     
-                                     <canvas id="graph1" class="graph-canvas"></canvas>
+                                     <canvas id="graph1" class="graph-canvas" width="405" height="203"></canvas>
                                     
                                      </div>
                                   
@@ -432,7 +433,7 @@
                                                      <div class="graph-container2 graph-card" data-value="val-graph">
                                                        <!-- <div class="hover-caption">Hover over bars to view specific values.</div> -->
                                                       
-                                                       <canvas id="graph2" class="graph-canvas"></canvas>
+                                                       <canvas id="graph2" class="graph-canvas graph-canvas2" width="405" height="203"></canvas>
                                                        <div class="legendBox"></div>
                                                      </div>
                                                   
@@ -451,7 +452,7 @@
                                                                      <div class="graph-container3 graph-card" data-value="asp-graph">
                                                                        <!-- <div class="hover-caption">Hover over bars to view specific values</div> -->
                                                                         
-                                                                         <canvas id="graph3" class="graph-canvas"></canvas>
+                                                                         <canvas id="graph3" class="graph-canvas" width="405" height="203"></canvas>
                                                                          <div class="legendBox"></div>
                                                                      </div>
                                                                   
@@ -484,7 +485,7 @@
                         
                        </div>
                      </div>
-                       <div class="pfs-legend-writing legend-writing lhs-legend-writing">Downloads</div>
+                       <div class="pfs-legend-writing legend-writing lhs-legend-writing">Prefilled Syringe</div>
                    </div>
                       
                    <div class="daij-legend-box legend-box">
@@ -496,7 +497,7 @@
                         
                        </div>
                      </div>
-                       <div class="daij-legend-writing legend-writing lhs-legend-writing">Vinyl</div>
+                       <div class="daij-legend-writing legend-writing lhs-legend-writing">Disposable Autoinjector</div>
 
 
                    </div>
@@ -509,7 +510,7 @@
                         
                        </div>
                      </div>
-                       <div class="dp-legend-writing legend-writing lhs-legend-writing">CD</div>
+                       <div class="dp-legend-writing legend-writing lhs-legend-writing">Disposable Pens</div>
 
 
                    </div>
@@ -575,9 +576,12 @@
 </div>
    <script type="module" src="/main.js"></script>
    <script type="module" src="/chart.js"></script>
-   <script type="module" src="./datasets.js"></script>
+   <!-- <script type="module" src="./datasets.js"></script> -->
    <script type="module" src="./chartjs-plugin.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
  </body>
 </html>
+
+
+

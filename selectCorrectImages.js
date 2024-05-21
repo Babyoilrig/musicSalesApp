@@ -185,3 +185,22 @@ export function showAndHideProductBoxes(moleculeSelectorValue) {
 }
 
 
+//Function to select correct medicine image based on value from the dropdown
+export function selectCorrectMedicineImage() {
+   const moleculeSelector = document.querySelector('.medicine-selector');
+   const deviceNameWriting = document.querySelector('.device-name');
+   const getMedicineSelectorValue = moleculeSelector.value;
+   // console.log(moleculeSelector.value);
+   const getMedicineImage = document.querySelector('.medicine-image-large');
+    if(getMedicineSelectorValue.includes("(" || ")")) {
+     const nameWithoutBrackets = removeBracketsFromName(getMedicineSelectorValue).toUpperCase();
+     getMedicineImage.src = `/${nameWithoutBrackets}.png`
+   const deviceName = photoOfWhatDevice(nameWithoutBrackets);
+   deviceNameWriting.textContent = deviceName;
+ } else {
+   getMedicineImage.src = `/${getMedicineSelectorValue}.png`
+   const deviceName = photoOfWhatDevice(getMedicineSelectorValue);
+   deviceNameWriting.textContent = deviceName;
+ }
+  }
+

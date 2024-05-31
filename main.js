@@ -140,7 +140,8 @@ return cagrValuesArray;
 showTutorialOnFirstVisit();
 
 
-fetchData("https://wcqpvqvauk.execute-api.ap-southeast-1.amazonaws.com/prod/molecule").then(moleculeData => {
+fetchData("https://sxtmrgzt5e.execute-api.eu-west-1.amazonaws.com/prod/music").then(moleculeData => {
+  
 
 
  //Dynamically input names and ids from first fetch into selector dropdown menu
@@ -159,7 +160,7 @@ fetchData("https://wcqpvqvauk.execute-api.ap-southeast-1.amazonaws.com/prod/mole
 
 
  //Providing default dropdown value on page load
- moleculeSelector.value = "ADALIMUMAB";
+ moleculeSelector.value = "BILLY IDOL";
  //Calling the function for second fetch on page load - with above default value
 
 
@@ -175,10 +176,10 @@ let asp = undefined;
 //Defining the function for the second (main data) fetch
 function checkIDAndFetchMainData(dropDownValue) {
  console.log('I am checkIDAndFetchMainData and I have run!');
- console.log(dropDownValue);
+ console.log({dropDownValue});
 
 
- fetchData(`https://wcqpvqvauk.execute-api.ap-southeast-1.amazonaws.com/prod/molecule/${dropDownValue}`).then(fetchedData => {
+ fetchData(`https://sxtmrgzt5e.execute-api.eu-west-1.amazonaws.com/prod/music/${dropDownValue}`).then(fetchedData => {
 
 
    data = fetchedData;
@@ -190,6 +191,7 @@ function checkIDAndFetchMainData(dropDownValue) {
    //This below
    indicationText.textContent = data.indication;
    patentExpiryText.textContent = data.usPatentExpiry;
+   console.log({data});
    const mainTitleUpperCase = data.name.toUpperCase();
    mainTitleText.textContent = mainTitleUpperCase;
 

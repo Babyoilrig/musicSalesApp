@@ -803,7 +803,14 @@
  .medicine-picture-box {
   padding: 0 2rem 0 2rem;
  }
- 
+
+ .medicine-pic-icon {
+  max-width: 5rem;
+  height: 100%;
+  width: 100%;
+ }
+
+/*  
  
  .medicine-pic1 {
   max-width: 9rem;
@@ -816,28 +823,28 @@
   max-height: 6rem;
   height: 100%;
   width: 100%;
- }
+ } */
  
- 
+/*  
  .medicine-pic3 {
   max-width: 6rem;
   height: 100%;
   width: 100%;
- }
+ } */
  
  
- .medicine-pic4 {
-  max-width: 7rem;
+ /* medicine-pic-icon.medicine-pic5 {
+  max-width: 10rem;
   height: 100%;
   width: 100%;
- }
+ } */
  
  
- .medicine-pic5 {
+ /* .medicine-pic5 {
   max-height: 7rem;
   height: 100%;
   width: 100%;
- }
+ } */
  
  
  .medicine-title {
@@ -1436,7 +1443,7 @@
  .speech-bubble1 {
   top: 1rem; right: 39.5rem;
  }
- .medicine-pic2 {
+ /* .medicine-pic2 {
   width: 8.8rem;
  }
  .medicine-pic3 {
@@ -1448,7 +1455,7 @@
  }
  .medicine-pic5 {
   width: 5.8rem;
- }
+ } */
  }
  
  
@@ -2685,39 +2692,39 @@
  }
  
  
- .medicine-pic1 {
+ /* .medicine-pic1 {
   max-width: 9rem;
   height: 100%;
   width: 100%;
- }
+ } */
  
  
- .medicine-pic2 {
+ /* .medicine-pic2 {
   max-height: 6rem;
   height: 100%;
   width: 100%;
- }
+ } */
  
  
- .medicine-pic3 {
+ /* .medicine-pic3 {
   max-width: 6rem;
   height: 100%;
   width: 100%;
- }
+ } */
  
  
- .medicine-pic4 {
+ /* .medicine-pic4 {
   max-width: 7rem;
   height: 100%;
   width: 100%;
- }
+ } */
  
  
- .medicine-pic5 {
+ /* .medicine-pic5 {
   max-height: 7rem;
   height: 100%;
   width: 100%;
- }
+ } */
  
  
  .medicine-title {
@@ -3313,22 +3320,22 @@
  .speech-bubble5 {
   top: 28.5rem; left: 30rem;
  }
- .speech-bubble1 {
+ /* .speech-bubble1 {
   top: 1rem; right: 39.5rem;
  }
  .medicine-pic2 {
   width: 8.8rem;
- }
- .medicine-pic3 {
+ } */
+ /* .medicine-pic3 {
   width: 8rem;
   margin-right: 2.8rem;
  }
  .medicine-pic4 {
   width: 5rem;
- }
- .medicine-pic5 {
+ } */
+ /* .medicine-pic5 {
   width: 5.8rem;
- }
+ } */
  }
  
  

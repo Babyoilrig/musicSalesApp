@@ -196,9 +196,10 @@ function checkIDAndFetchMainData(dropDownValue) {
    mainTitleText.textContent = mainTitleUpperCase;
 
 
-   const pfs = data.containers.find(c => c.primaryContainer === "Prefilled Syringe") ? data.containers.find(c => c.primaryContainer === "Prefilled Syringe") : 0;
-  
-   const daij = data.containers.find(c => c.primaryContainer === "Disposable autoinjector") ? data.containers.find(c => c.primaryContainer === "Disposable autoinjector") : 0;
+   const pfs = data.containers.find(c => c.primaryContainer === "PFS") ? data.containers.find(c => c.primaryContainer === "PFS") : 0;
+  console.log(pfs);
+   const daij = data.containers.find(c => c.primaryContainer === "disposable autoinjectors") ? data.containers.find(c => c.primaryContainer === "disposable autoinjectors") : 0;
+   console.log(daij);
   
    const dp = data.containers.find(c => c.primaryContainer === "Disposable pens") ? data.containers.find(c => c.primaryContainer === "Disposable pens") : 0;
   

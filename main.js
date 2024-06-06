@@ -61,13 +61,16 @@ let configVal;
 
 
 const colours = {
- colour0: '#9799af', //dark grey
- colour1: '#dedede', //light grey
- colour2: '#e0b0ff', //purple
+//  colour0: '#9799af', //dark grey
+//  colour1: '#dedede', //light grey
+//  colour2: '#e0b0ff', //purple
+colour0: '#389f0a',
+colour1: '#5ae717',
+colour2: '#d3ffb3',
  colour3: '#ff9800', //orange
  colour4: '#e5de00', //yellow
  colour5: '#ff6865', //red
- colour6: '#277dfe', //bright blue
+ colour6: '#2a17cb', //bright blue
  colour7: '#00c0f9', //light blue
  colour8: '#02f7d8', //turquoise
 }

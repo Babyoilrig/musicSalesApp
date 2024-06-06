@@ -346,7 +346,7 @@ function calculateCagrForTotalsRow(yearTotals, metric) {
    // console.log(yearTotals);
    if(metric === 'vol') {
        isTotal = 'true';
-       numberOfYears = 3;
+       numberOfYears = 2;
 //Here - is a check (for vol) if the yrear 1 value is zero, it will use the year 2 value.
 if (yearTotals[0] === 0) {
    beginningValue.push(yearTotals[1]);
@@ -363,7 +363,7 @@ if (yearTotals[0] === 0) {
        return cagrForTotal;
    } if (metric === 'val') {
        isTotal = 'true';
-       numberOfYears = 2;
+       numberOfYears = 1;
        beginningValue.push(yearTotals[0]);
        endingValue.push(yearTotals[1]);
        // console.log(beginningValue);

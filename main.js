@@ -1906,7 +1906,7 @@ const generateTrendLineDataPoints = (relevantData, metric, device) => {
  let years;
  let initialbeginningValuesWithKeysVol = {};
  if (metric == 'vol') {
-   years = 3;
+   years = 2;
 
 
    //HERE (only for Vol)- MAKING INITIAL STARTING VALUES OBJECT
@@ -1915,7 +1915,7 @@ const generateTrendLineDataPoints = (relevantData, metric, device) => {
 
 
  } else {
-   years = 2;
+   years = 1;
  }
 
 

@@ -7,14 +7,14 @@ import { checkIfString } from './Utilities';
 
 
 export function findSingularBeginningAndEndingValuesforCAGR() {
-   beginningAndEndingValuesPfsVol = generateDataforTrendlineOneDevice('Prefilled Syringe', 'vol');
-   beginningAndEndingValuesPfsVal = generateDataforTrendlineOneDevice('Prefilled Syringe', 'val');
-   beginningAndEndingValuesPfsAsp = generateDataforTrendlineOneDevice('Prefilled Syringe', 'asp');
+   beginningAndEndingValuesPfsVol = generateDataforTrendlineOneDevice('PFS', 'vol');
+   beginningAndEndingValuesPfsVal = generateDataforTrendlineOneDevice('PFS', 'val');
+   beginningAndEndingValuesPfsAsp = generateDataforTrendlineOneDevice('PFS', 'asp');
   
     //Getting trendline data for Daij
-   beginningAndEndingValuesDaijVol = generateDataforTrendlineOneDevice('Disposable autoinjector', 'vol');
-   beginningAndEndingValuesDaijVal = generateDataforTrendlineOneDevice('Disposable autoinjector', 'val');
-   beginningAndEndingValuesDaijAsp = generateDataforTrendlineOneDevice('Disposable autoinjector', 'asp');
+   beginningAndEndingValuesDaijVol = generateDataforTrendlineOneDevice('disposable autoinjectors', 'vol');
+   beginningAndEndingValuesDaijVal = generateDataforTrendlineOneDevice('disposable autoinjectors', 'val');
+   beginningAndEndingValuesDaijAsp = generateDataforTrendlineOneDevice('disposable autoinjectors', 'asp');
     //Getting trendline data for Dp
    beginningAndEndingValuesDpVol = generateDataforTrendlineOneDevice('Disposable pens', 'vol');
    beginningAndEndingValuesDpVal = generateDataforTrendlineOneDevice('Disposable pens', 'val');

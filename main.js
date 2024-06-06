@@ -176,7 +176,7 @@ let asp = undefined;
 //Defining the function for the second (main data) fetch
 function checkIDAndFetchMainData(dropDownValue) {
  console.log('I am checkIDAndFetchMainData and I have run!');
- console.log({dropDownValue});
+//  console.log({dropDownValue});
 
 
  fetchData(`https://sxtmrgzt5e.execute-api.eu-west-1.amazonaws.com/prod/music/${dropDownValue}`).then(fetchedData => {
@@ -202,7 +202,7 @@ function checkIDAndFetchMainData(dropDownValue) {
    console.log(daij);
   
    const dp = data.containers.find(c => c.primaryContainer === "Disposable pens") ? data.containers.find(c => c.primaryContainer === "Disposable pens") : 0;
-  
+  console.log(dp);
 
 
   
@@ -210,6 +210,7 @@ function checkIDAndFetchMainData(dropDownValue) {
 
 
    const pfsAaa = pfs ? pfs.region.AAA : 0;
+  //  console.log(pfsAaa);
    const pfsEurope = pfs ? pfs.region.EUROPE : 0;
    const pfsLatinAmerica = pfs ? pfs.region.LATINAMERICA : 0;
    const pfsNorthAmerica = pfs ? pfs.region.NORTHAMERICA : 0;
@@ -259,17 +260,17 @@ function checkIDAndFetchMainData(dropDownValue) {
 
 
 function findSingularBeginningAndEndingValuesforCAGR() {
- beginningAndEndingValuesPfsVol = generateDataforTrendlineOneDevice('Prefilled Syringe', 'vol');
- beginningAndEndingValuesPfsVal = generateDataforTrendlineOneDevice('Prefilled Syringe', 'val');
+ beginningAndEndingValuesPfsVol = generateDataforTrendlineOneDevice('PFS', 'vol');
+ beginningAndEndingValuesPfsVal = generateDataforTrendlineOneDevice('PFS', 'val');
  console.log(beginningAndEndingValuesPfsVal);
- beginningAndEndingValuesPfsAsp = generateDataforTrendlineOneDevice('Prefilled Syringe', 'asp');
+ beginningAndEndingValuesPfsAsp = generateDataforTrendlineOneDevice('PFS', 'asp');
  // console.log(beginningAndEndingValuesPfsVol[2][1]);
 
 
  //Getting trendline data for Daij
- beginningAndEndingValuesDaijVol = generateDataforTrendlineOneDevice('Disposable autoinjector', 'vol');
- beginningAndEndingValuesDaijVal = generateDataforTrendlineOneDevice('Disposable autoinjector', 'val');
- beginningAndEndingValuesDaijAsp = generateDataforTrendlineOneDevice('Disposable autoinjector', 'asp');
+ beginningAndEndingValuesDaijVol = generateDataforTrendlineOneDevice('disposable autoinjectors', 'vol');
+ beginningAndEndingValuesDaijVal = generateDataforTrendlineOneDevice('disposable autoinjectors', 'val');
+ beginningAndEndingValuesDaijAsp = generateDataforTrendlineOneDevice('disposable autoinjectors', 'asp');
 
 
  //Getting trendline data for Dp
@@ -281,34 +282,34 @@ function findSingularBeginningAndEndingValuesforCAGR() {
  }
 
 
-findSingularBeginningAndEndingValuesforCAGR();
+// findSingularBeginningAndEndingValuesforCAGR();
 
 
  
 function findCombinedBeginningAndEndingValuesforCAGR() {
- beginningAndEndingValuesPfsAndDaijVol = generateCombinedDataforTrendlineTwoDevices({ device1: 'Prefilled Syringe', device2: 'Disposable autoinjector' }, 'vol');
+ beginningAndEndingValuesPfsAndDaijVol = generateCombinedDataforTrendlineTwoDevices({ device1: 'PFS', device2: 'disposable autoinjectors' }, 'vol');
   
- beginningAndEndingValuesPfsAndDaijVal = generateCombinedDataforTrendlineTwoDevices({ device1: 'Prefilled Syringe', device2: 'Disposable autoinjector' }, 'val');
+ beginningAndEndingValuesPfsAndDaijVal = generateCombinedDataforTrendlineTwoDevices({ device1: 'PFS', device2: 'disposable autoinjectors' }, 'val');
 
 
- beginningAndEndingValuesDaijAndDpVol = generateCombinedDataforTrendlineTwoDevices({ device1: 'Disposable autoinjector', device2: 'Disposable pens' }, 'vol');
+ beginningAndEndingValuesDaijAndDpVol = generateCombinedDataforTrendlineTwoDevices({ device1: 'disposable autoinjectors', device2: 'Disposable pens' }, 'vol');
 
 
- beginningAndEndingValuesDaijAndDpVal = generateCombinedDataforTrendlineTwoDevices({ device1: 'Disposable autoinjector', device2: 'Disposable pens' }, 'val');
+ beginningAndEndingValuesDaijAndDpVal = generateCombinedDataforTrendlineTwoDevices({ device1: 'disposable autoinjectors', device2: 'Disposable pens' }, 'val');
 
 
- beginningAndEndingValuesPfsAndDpVol = generateCombinedDataforTrendlineTwoDevices({ device1: 'Prefilled Syringe', device2: 'Disposable pens' }, 'vol');
- beginningAndEndingValuesPfsAndDpVal = generateCombinedDataforTrendlineTwoDevices({ device1: 'Prefilled Syringe', device2: 'Disposable pens' }, 'val');
+ beginningAndEndingValuesPfsAndDpVol = generateCombinedDataforTrendlineTwoDevices({ device1: 'PFS', device2: 'Disposable pens' }, 'vol');
+ beginningAndEndingValuesPfsAndDpVal = generateCombinedDataforTrendlineTwoDevices({ device1: 'PFS', device2: 'Disposable pens' }, 'val');
 
 
- beginningAndEndingValuesThreeDevicesVol = generateCombinedDataForTrendlineThreeDevices({device1: 'Prefilled Syringe', device2: 'Disposable autoinjector', device3: 'Disposable pens'}, 'vol');
- beginningAndEndingValuesThreeDevicesVal = generateCombinedDataForTrendlineThreeDevices({device1: 'Prefilled Syringe', device2: 'Disposable autoinjector', device3: 'Disposable pens'}, 'val');
+ beginningAndEndingValuesThreeDevicesVol = generateCombinedDataForTrendlineThreeDevices({device1: 'PFS', device2: 'disposable autoinjectors', device3: 'Disposable pens'}, 'vol');
+ beginningAndEndingValuesThreeDevicesVal = generateCombinedDataForTrendlineThreeDevices({device1: 'PFS', device2: 'disposable autoinjectors', device3: 'Disposable pens'}, 'val');
 
 
 }
 
 
-findCombinedBeginningAndEndingValuesforCAGR();
+// findCombinedBeginningAndEndingValuesforCAGR();
 
 
 
@@ -320,6 +321,7 @@ let graphDataArray = [];
 
 if(metric == "Vol") {
 const graphDataPfsYear1 = sourceGraphData(metric, 'PFS', '2021', pfsAaa, pfsEurope, pfsLatinAmerica, pfsNorthAmerica, colours.colour0, 0, false, molecule);
+// console.log(graphDataPfsYear1);
 const graphDataDaijYear1 = sourceGraphData(metric, 'AI', '2021', daijAaa, daijEurope, daijLatinAmerica, daijNorthAmerica, colours.colour1, 0, true, molecule);
 const graphDataDpYear1 = sourceGraphData(metric, 'DP', '2021', dpAaa, dpEurope, dpLatinAmerica, dpNorthAmerica, colours.colour2, 0, true, molecule);
 const graphDataPfsYear2 = sourceGraphData(metric, 'PFS', '2022', pfsAaa, pfsEurope, pfsLatinAmerica, pfsNorthAmerica, colours.colour3, 1, false, molecule);
@@ -368,6 +370,7 @@ return graphDataArray;
 //Creating vol graph data
 const graphDataVol = callGenerateGraphDataAndPutDataInArray("Vol", colours, molecule);
 const volGraphDataset = createGraphDataset(graphDataVol, 'Vol');
+// console.log(volGraphDataset);
 
 
  //Creating val graph data
@@ -634,9 +637,9 @@ function showCorrectDataAndHighlightCorrectButtons(data, volume, value, asp) {
    //Here - need legend with 3 colours
    showLegend(volume, 'allThreeDevices', { colour1: 0, colour2: 1, colour3: 3, colour4: 4, colour5: 6, colour6: 7 });
    metric = "volume";
-   showAnnotations(volume, metric, beginningAndEndingValuesThreeDevicesVol[0], beginningAndEndingValuesThreeDevicesVol[2][0], beginningAndEndingValuesThreeDevicesVol[2][1], beginningAndEndingValuesThreeDevicesVol[1]);
+  //  showAnnotations(volume, metric, beginningAndEndingValuesThreeDevicesVol[0], beginningAndEndingValuesThreeDevicesVol[2][0], beginningAndEndingValuesThreeDevicesVol[2][1], beginningAndEndingValuesThreeDevicesVol[1]);
    metric = "value";
-   showAnnotations(value, metric, beginningAndEndingValuesThreeDevicesVal[0], beginningAndEndingValuesThreeDevicesVal[2][0], beginningAndEndingValuesThreeDevicesVal[2][1], beginningAndEndingValuesThreeDevicesVal[1]);
+  //  showAnnotations(value, metric, beginningAndEndingValuesThreeDevicesVal[0], beginningAndEndingValuesThreeDevicesVal[2][0], beginningAndEndingValuesThreeDevicesVal[2][1], beginningAndEndingValuesThreeDevicesVal[1]);
    volume.update();
    value.update();
    asp.update();
@@ -648,11 +651,11 @@ function showCorrectDataAndHighlightCorrectButtons(data, volume, value, asp) {
    dpButton.classList.add('clicked-red');
    showLegend(volume, 'Dp', { colour1: 2, colour2: 2, colour3: 5, colour4: 5, colour5: 8, colour6: 8 });
    metric = "volume";
-   showAnnotations(volume, metric, beginningAndEndingValuesDpVol[0], beginningAndEndingValuesDpVol[2][0], beginningAndEndingValuesDpVol[2][1], beginningAndEndingValuesDpVol[1]);
+  //  showAnnotations(volume, metric, beginningAndEndingValuesDpVol[0], beginningAndEndingValuesDpVol[2][0], beginningAndEndingValuesDpVol[2][1], beginningAndEndingValuesDpVol[1]);
    metric = "value";
-   showAnnotations(value, metric, beginningAndEndingValuesDpVal[0], beginningAndEndingValuesDpVal[2][0], beginningAndEndingValuesDpVal[2][1], beginningAndEndingValuesDpVal[1]);
+  //  showAnnotations(value, metric, beginningAndEndingValuesDpVal[0], beginningAndEndingValuesDpVal[2][0], beginningAndEndingValuesDpVal[2][1], beginningAndEndingValuesDpVal[1]);
    metric = "asp";
-   showAnnotations(asp, metric, beginningAndEndingValuesDpAsp[0], beginningAndEndingValuesDpAsp[2][0], beginningAndEndingValuesDpAsp[2][1], beginningAndEndingValuesDpAsp[1]);
+  //  showAnnotations(asp, metric, beginningAndEndingValuesDpAsp[0], beginningAndEndingValuesDpAsp[2][0], beginningAndEndingValuesDpAsp[2][1], beginningAndEndingValuesDpAsp[1]);
    //pfs
    //volume datasets -
    volume.data.datasets[0].hidden = true;
@@ -707,15 +710,15 @@ function showCorrectDataAndHighlightCorrectButtons(data, volume, value, asp) {
    daijButton.classList.add('clicked-red');
    showLegend(volume, 'Daij', { colour1: 1, colour2: 1, colour3: 4, colour4: 4, colour5: 7, colour6: 7 });
    metric = "volume";
-   showAnnotations(volume, metric, beginningAndEndingValuesDaijVol[0], beginningAndEndingValuesDaijVol[2][0], beginningAndEndingValuesDaijVol[2][1], beginningAndEndingValuesDaijVol[1]);
+  //  showAnnotations(volume, metric, beginningAndEndingValuesDaijVol[0], beginningAndEndingValuesDaijVol[2][0], beginningAndEndingValuesDaijVol[2][1], beginningAndEndingValuesDaijVol[1]);
    metric = "value";
    // // // // Daij - Value - Trendline
-   showAnnotations(value, metric, beginningAndEndingValuesDaijVal[0], beginningAndEndingValuesDaijVal[2][0], beginningAndEndingValuesDaijVal[2][1], beginningAndEndingValuesDaijVal[1]);
+  //  showAnnotations(value, metric, beginningAndEndingValuesDaijVal[0], beginningAndEndingValuesDaijVal[2][0], beginningAndEndingValuesDaijVal[2][1], beginningAndEndingValuesDaijVal[1]);
 
 
    // // // // Daij - Asp - Trendline
    metric = "asp";
-   showAnnotations(asp, metric, beginningAndEndingValuesDaijAsp[0], beginningAndEndingValuesDaijAsp[2][0], beginningAndEndingValuesDaijAsp[2][1], beginningAndEndingValuesDaijAsp[1]);
+  //  showAnnotations(asp, metric, beginningAndEndingValuesDaijAsp[0], beginningAndEndingValuesDaijAsp[2][0], beginningAndEndingValuesDaijAsp[2][1], beginningAndEndingValuesDaijAsp[1]);
 
 
    //pfs
@@ -772,11 +775,11 @@ function showCorrectDataAndHighlightCorrectButtons(data, volume, value, asp) {
    pfsButton.classList.add('clicked-red');
    showLegend(volume, 'Pfs', { colour1: 0, colour2: 0, colour3: 3, colour4: 3, colour5: 6, colour6: 6 });
    metric = "volume";
-   showAnnotations(volume, metric, beginningAndEndingValuesPfsVol[0], beginningAndEndingValuesPfsVol[2][0], beginningAndEndingValuesPfsVol[2][1], beginningAndEndingValuesPfsVol[1]);
+  //  showAnnotations(volume, metric, beginningAndEndingValuesPfsVol[0], beginningAndEndingValuesPfsVol[2][0], beginningAndEndingValuesPfsVol[2][1], beginningAndEndingValuesPfsVol[1]);
    metric = "value";
-   showAnnotations(value, metric, beginningAndEndingValuesPfsVal[0], beginningAndEndingValuesPfsVal[2][0], beginningAndEndingValuesPfsVal[2][1], beginningAndEndingValuesPfsVal[1]);
+  //  showAnnotations(value, metric, beginningAndEndingValuesPfsVal[0], beginningAndEndingValuesPfsVal[2][0], beginningAndEndingValuesPfsVal[2][1], beginningAndEndingValuesPfsVal[1]);
    metric = "asp";
-   showAnnotations(asp, metric, beginningAndEndingValuesPfsAsp[0], beginningAndEndingValuesPfsAsp[2][0], beginningAndEndingValuesPfsAsp[2][1], beginningAndEndingValuesPfsAsp[1]);
+  //  showAnnotations(asp, metric, beginningAndEndingValuesPfsAsp[0], beginningAndEndingValuesPfsAsp[2][0], beginningAndEndingValuesPfsAsp[2][1], beginningAndEndingValuesPfsAsp[1]);
   
   
    //pfs
@@ -833,9 +836,9 @@ function showCorrectDataAndHighlightCorrectButtons(data, volume, value, asp) {
    dpButton.classList.add('clicked-red');
    showLegend(volume, 'daijAndDp', { colour1: 1, colour2: 2, colour3: 4, colour4: 5, colour5: 7, colour6: 8 });
    metric = "volume";
-   showAnnotations(volume, metric, beginningAndEndingValuesDaijAndDpVol[0], beginningAndEndingValuesDaijAndDpVol[2][0], beginningAndEndingValuesDaijAndDpVol[2][1], beginningAndEndingValuesDaijAndDpVol[1]);
+  //  showAnnotations(volume, metric, beginningAndEndingValuesDaijAndDpVol[0], beginningAndEndingValuesDaijAndDpVol[2][0], beginningAndEndingValuesDaijAndDpVol[2][1], beginningAndEndingValuesDaijAndDpVol[1]);
    metric = "value";
-   showAnnotations(value, metric, beginningAndEndingValuesDaijAndDpVal[0], beginningAndEndingValuesDaijAndDpVal[2][0], beginningAndEndingValuesDaijAndDpVal[2][1], beginningAndEndingValuesDaijAndDpVal[1]);
+  //  showAnnotations(value, metric, beginningAndEndingValuesDaijAndDpVal[0], beginningAndEndingValuesDaijAndDpVal[2][0], beginningAndEndingValuesDaijAndDpVal[2][1], beginningAndEndingValuesDaijAndDpVal[1]);
 //pfs
    //volume datasets -
    volume.data.datasets[0].hidden = true;
@@ -897,9 +900,9 @@ function showCorrectDataAndHighlightCorrectButtons(data, volume, value, asp) {
    //Legend - pfs n dp selected
    showLegend(volume, 'pfsAndDp', { colour1: 0, colour2: 2, colour3: 3, colour4: 5, colour5: 6, colour6: 8 });
    metric = "volume";
-   showAnnotations(volume, metric, beginningAndEndingValuesPfsAndDpVol[0], beginningAndEndingValuesPfsAndDpVol[2][0], beginningAndEndingValuesPfsAndDpVol[2][1], beginningAndEndingValuesPfsAndDpVol[1]);
+  //  showAnnotations(volume, metric, beginningAndEndingValuesPfsAndDpVol[0], beginningAndEndingValuesPfsAndDpVol[2][0], beginningAndEndingValuesPfsAndDpVol[2][1], beginningAndEndingValuesPfsAndDpVol[1]);
    metric = "value";
-   showAnnotations(value, metric, beginningAndEndingValuesPfsAndDpVal[0], beginningAndEndingValuesPfsAndDpVal[2][0], beginningAndEndingValuesPfsAndDpVal[2][1], beginningAndEndingValuesPfsAndDpVal[1]);
+  //  showAnnotations(value, metric, beginningAndEndingValuesPfsAndDpVal[0], beginningAndEndingValuesPfsAndDpVal[2][0], beginningAndEndingValuesPfsAndDpVal[2][1], beginningAndEndingValuesPfsAndDpVal[1]);
    //pfs
    //volume datasets -
    volume.data.datasets[0].hidden = false;
@@ -962,9 +965,9 @@ function showCorrectDataAndHighlightCorrectButtons(data, volume, value, asp) {
    daijButton.classList.add('clicked-red');
    showLegend(volume, 'pfsAndDaij', { colour1: 0, colour2: 1, colour3: 3, colour4: 4, colour5: 6, colour6: 7 });
    metric = "volume";
-   showAnnotations(volume, metric, beginningAndEndingValuesPfsAndDaijVol[0], beginningAndEndingValuesPfsAndDaijVol[2][0], beginningAndEndingValuesPfsAndDaijVol[2][1], beginningAndEndingValuesPfsAndDaijVol[1]);
+  //  showAnnotations(volume, metric, beginningAndEndingValuesPfsAndDaijVol[0], beginningAndEndingValuesPfsAndDaijVol[2][0], beginningAndEndingValuesPfsAndDaijVol[2][1], beginningAndEndingValuesPfsAndDaijVol[1]);
    metric = "value";
-   showAnnotations(value, metric, beginningAndEndingValuesPfsAndDaijVal[0], beginningAndEndingValuesPfsAndDaijVal[2][0], beginningAndEndingValuesPfsAndDaijVal[2][1], beginningAndEndingValuesPfsAndDaijVal[1]);
+  //  showAnnotations(value, metric, beginningAndEndingValuesPfsAndDaijVal[0], beginningAndEndingValuesPfsAndDaijVal[2][0], beginningAndEndingValuesPfsAndDaijVal[2][1], beginningAndEndingValuesPfsAndDaijVal[1]);
    //pfs
    //volume datasets -
    volume.data.datasets[0].hidden = false;
@@ -1065,9 +1068,9 @@ function showCorrectDataAndHighlightCorrectButtons(data, volume, value, asp) {
    showLegend(volume, 'allThreeDevices', { colour1: 0, colour2: 2, colour3: 3, colour4: 5, colour5: 6, colour6: 8 });
   
    metric = "volume";
-   showAnnotations(volume, metric, beginningAndEndingValuesThreeDevicesVol[0], beginningAndEndingValuesThreeDevicesVol[2][0], beginningAndEndingValuesThreeDevicesVol[2][1], beginningAndEndingValuesThreeDevicesVol[1]);
+  //  showAnnotations(volume, metric, beginningAndEndingValuesThreeDevicesVol[0], beginningAndEndingValuesThreeDevicesVol[2][0], beginningAndEndingValuesThreeDevicesVol[2][1], beginningAndEndingValuesThreeDevicesVol[1]);
    metric = "value";
-   showAnnotations(value, metric, beginningAndEndingValuesThreeDevicesVal[0], beginningAndEndingValuesThreeDevicesVal[2][0], beginningAndEndingValuesThreeDevicesVal[2][1], beginningAndEndingValuesThreeDevicesVal[1]);
+  //  showAnnotations(value, metric, beginningAndEndingValuesThreeDevicesVal[0], beginningAndEndingValuesThreeDevicesVal[2][0], beginningAndEndingValuesThreeDevicesVal[2][1], beginningAndEndingValuesThreeDevicesVal[1]);
    console.log('Combination 1');
    // PFS
    //
@@ -1177,9 +1180,9 @@ function showCorrectDataAndHighlightCorrectButtons(data, volume, value, asp) {
   
    //Show annotations - Combined
    metric = "volume";
-   showAnnotations(volume, metric, beginningAndEndingValuesPfsAndDaijVol[0], beginningAndEndingValuesPfsAndDaijVol[2][0], beginningAndEndingValuesPfsAndDaijVol[2][1], beginningAndEndingValuesPfsAndDaijVol[1]);
+  //  showAnnotations(volume, metric, beginningAndEndingValuesPfsAndDaijVol[0], beginningAndEndingValuesPfsAndDaijVol[2][0], beginningAndEndingValuesPfsAndDaijVol[2][1], beginningAndEndingValuesPfsAndDaijVol[1]);
    metric = "value";
-   showAnnotations(value, metric, beginningAndEndingValuesPfsAndDaijVal[0], beginningAndEndingValuesPfsAndDaijVal[2][0], beginningAndEndingValuesPfsAndDaijVal[2][1], beginningAndEndingValuesPfsAndDaijVal[1]);
+  //  showAnnotations(value, metric, beginningAndEndingValuesPfsAndDaijVal[0], beginningAndEndingValuesPfsAndDaijVal[2][0], beginningAndEndingValuesPfsAndDaijVal[2][1], beginningAndEndingValuesPfsAndDaijVal[1]);
    console.log('Combination 2');
 
 
@@ -1250,9 +1253,9 @@ function showCorrectDataAndHighlightCorrectButtons(data, volume, value, asp) {
   
    //Show annotations - Combined
    metric = "volume";
-   showAnnotations(volume, metric, beginningAndEndingValuesDaijAndDpVol[0], beginningAndEndingValuesDaijAndDpVol[2][0], beginningAndEndingValuesDaijAndDpVol[2][1], beginningAndEndingValuesDaijAndDpVol[1]);
+  //  showAnnotations(volume, metric, beginningAndEndingValuesDaijAndDpVol[0], beginningAndEndingValuesDaijAndDpVol[2][0], beginningAndEndingValuesDaijAndDpVol[2][1], beginningAndEndingValuesDaijAndDpVol[1]);
    metric = "value";
-   showAnnotations(value, metric, beginningAndEndingValuesDaijAndDpVal[0], beginningAndEndingValuesDaijAndDpVal[2][0], beginningAndEndingValuesDaijAndDpVal[2][1], beginningAndEndingValuesDaijAndDpVal[1]);
+  //  showAnnotations(value, metric, beginningAndEndingValuesDaijAndDpVal[0], beginningAndEndingValuesDaijAndDpVal[2][0], beginningAndEndingValuesDaijAndDpVal[2][1], beginningAndEndingValuesDaijAndDpVal[1]);
    console.log('Combination 3');
 
 
@@ -1325,9 +1328,9 @@ function showCorrectDataAndHighlightCorrectButtons(data, volume, value, asp) {
   
    //Show annotations - Combined
    metric = "volume";
-   showAnnotations(volume, metric, beginningAndEndingValuesPfsAndDpVol[0], beginningAndEndingValuesPfsAndDpVol[2][0], beginningAndEndingValuesPfsAndDpVol[2][1], beginningAndEndingValuesPfsAndDpVol[1]);
+  //  showAnnotations(volume, metric, beginningAndEndingValuesPfsAndDpVol[0], beginningAndEndingValuesPfsAndDpVol[2][0], beginningAndEndingValuesPfsAndDpVol[2][1], beginningAndEndingValuesPfsAndDpVol[1]);
    metric = "value";
-   showAnnotations(value, metric, beginningAndEndingValuesPfsAndDpVal[0], beginningAndEndingValuesPfsAndDpVal[2][0], beginningAndEndingValuesPfsAndDpVal[2][1], beginningAndEndingValuesPfsAndDpVal[1]);
+  //  showAnnotations(value, metric, beginningAndEndingValuesPfsAndDpVal[0], beginningAndEndingValuesPfsAndDpVal[2][0], beginningAndEndingValuesPfsAndDpVal[2][1], beginningAndEndingValuesPfsAndDpVal[1]);
 
 
    graphContainer2.classList.remove('hidden');
@@ -1409,11 +1412,11 @@ function showCorrectDataAndHighlightCorrectButtons(data, volume, value, asp) {
    showLegend(volume, 'Pfs', { colour1: 0, colour2: 0, colour3: 3, colour4: 3, colour5: 6, colour6: 6 });
    //Show annotations - Pfs
    metric = "volume";
-   showAnnotations(volume, metric, beginningAndEndingValuesPfsVol[0], beginningAndEndingValuesPfsVol[2][0], beginningAndEndingValuesPfsVol[2][1], beginningAndEndingValuesPfsVol[1]);
+  //  showAnnotations(volume, metric, beginningAndEndingValuesPfsVol[0], beginningAndEndingValuesPfsVol[2][0], beginningAndEndingValuesPfsVol[2][1], beginningAndEndingValuesPfsVol[1]);
    metric = "value";
-   showAnnotations(value, metric, beginningAndEndingValuesPfsVal[0], beginningAndEndingValuesPfsVal[2][0], beginningAndEndingValuesPfsVal[2][1], beginningAndEndingValuesPfsVal[1]);
+  //  showAnnotations(value, metric, beginningAndEndingValuesPfsVal[0], beginningAndEndingValuesPfsVal[2][0], beginningAndEndingValuesPfsVal[2][1], beginningAndEndingValuesPfsVal[1]);
    metric = "asp";
-   showAnnotations(asp, metric, beginningAndEndingValuesPfsAsp[0], beginningAndEndingValuesPfsAsp[2][0], beginningAndEndingValuesPfsAsp[2][1], beginningAndEndingValuesPfsAsp[1]);
+  //  showAnnotations(asp, metric, beginningAndEndingValuesPfsAsp[0], beginningAndEndingValuesPfsAsp[2][0], beginningAndEndingValuesPfsAsp[2][1], beginningAndEndingValuesPfsAsp[1]);
    console.log('Combination 5');
 
 
@@ -1481,16 +1484,16 @@ function showCorrectDataAndHighlightCorrectButtons(data, volume, value, asp) {
    //Create daij annotations
    //Daij - Volume - Trendline
    metric = "volume";
-   showAnnotations(volume, metric, beginningAndEndingValuesDaijVol[0], beginningAndEndingValuesDaijVol[2][0], beginningAndEndingValuesDaijVol[2][1], beginningAndEndingValuesDaijVol[1]);
+  //  showAnnotations(volume, metric, beginningAndEndingValuesDaijVol[0], beginningAndEndingValuesDaijVol[2][0], beginningAndEndingValuesDaijVol[2][1], beginningAndEndingValuesDaijVol[1]);
    console.log('Combination 6');
    // // Daij - Value - Trendline
    metric = "value";
-   showAnnotations(value, metric, beginningAndEndingValuesDaijVal[0], beginningAndEndingValuesDaijVal[2][0], beginningAndEndingValuesDaijVal[2][1], beginningAndEndingValuesDaijVal[1]);
+  //  showAnnotations(value, metric, beginningAndEndingValuesDaijVal[0], beginningAndEndingValuesDaijVal[2][0], beginningAndEndingValuesDaijVal[2][1], beginningAndEndingValuesDaijVal[1]);
 
 
    // // Daij - Asp - Trendline
    metric = "asp";
-   showAnnotations(asp, metric, beginningAndEndingValuesDaijAsp[0], beginningAndEndingValuesDaijAsp[2][0], beginningAndEndingValuesDaijAsp[2][1], beginningAndEndingValuesDaijAsp[1]);
+  //  showAnnotations(asp, metric, beginningAndEndingValuesDaijAsp[0], beginningAndEndingValuesDaijAsp[2][0], beginningAndEndingValuesDaijAsp[2][1], beginningAndEndingValuesDaijAsp[1]);
 
 
    volume.update();
@@ -1514,11 +1517,11 @@ function showCorrectDataAndHighlightCorrectButtons(data, volume, value, asp) {
  else if (!pfsButton.classList.contains('clicked-red') && !daijButton.classList.contains('clicked-red') && dpButton.classList.contains('clicked-red')) {
    showLegend(volume, 'Dp', { colour1: 2, colour2: 2, colour3: 5, colour4: 5, colour5: 8, colour6: 8 });
    metric = "volume";
-   showAnnotations(volume, metric, beginningAndEndingValuesDpVol[0], beginningAndEndingValuesDpVol[2][0], beginningAndEndingValuesDpVol[2][1], beginningAndEndingValuesDpVol[1]);
+  //  showAnnotations(volume, metric, beginningAndEndingValuesDpVol[0], beginningAndEndingValuesDpVol[2][0], beginningAndEndingValuesDpVol[2][1], beginningAndEndingValuesDpVol[1]);
    metric = "value";
-   showAnnotations(value, metric, beginningAndEndingValuesDpVal[0], beginningAndEndingValuesDpVal[2][0], beginningAndEndingValuesDpVal[2][1], beginningAndEndingValuesDpVal[1]);
+  //  showAnnotations(value, metric, beginningAndEndingValuesDpVal[0], beginningAndEndingValuesDpVal[2][0], beginningAndEndingValuesDpVal[2][1], beginningAndEndingValuesDpVal[1]);
    metric = "asp";
-   showAnnotations(asp, metric, beginningAndEndingValuesDpAsp[0], beginningAndEndingValuesDpAsp[2][0], beginningAndEndingValuesDpAsp[2][1], beginningAndEndingValuesDpAsp[1]);
+  //  showAnnotations(asp, metric, beginningAndEndingValuesDpAsp[0], beginningAndEndingValuesDpAsp[2][0], beginningAndEndingValuesDpAsp[2][1], beginningAndEndingValuesDpAsp[1]);
    console.log('Combination 7');
    //PFS
    // volume datasets

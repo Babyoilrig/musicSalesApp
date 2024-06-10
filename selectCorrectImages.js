@@ -2,31 +2,18 @@ import { removeBracketsFromName } from "./Utilities";
 
 
 const safetyDevice = [
-   "DENOSUMAB",
-   "FILGRASTIM",
-   "MEPOLIZUMAB",
-   "OMALIZUMAB",
+   "Test",
+   
 ];
 
 
 const pens = [
-   "FOLLITROPIN ALFA",
-   "INSULIN ASPART",
-   "INSULIN GLARGINE",
-   "INSULIN LISPRO",
-   "LIRAGLUTIDE SAXENDA",
-   "LIRAGLUTIDE VICTOZA",
-   "SEMAGLUTIDE OZEMPIC",
-   "SEMAGLUTIDE WEGOVY",
-   "SOMATROPIN",
-   "TERIPARATIDE",
-
-
+   "Test",
 ];
 
 
 const wearableDevice = [
-   "USTEKINUMAB",
+   "Test",
 ];
 
 
@@ -34,60 +21,49 @@ const wearableDevice = [
 
 
 const hypakOrNeopakPhysiojectAndUltrasafe = [
-   "INFLIXIMAB",
-   "TOCILIZUMAB",
-   "GOLIMUMAB",
-   "DARBEPOETIN ALFA",
+   "A CERTAIN RATIO",
+   "ACDC",
+   
 ];
 
 
 const hypakOrNeopakPhysiojectAndVystra = [
-   "SEMAGLUTIDE WEGOVY",
+   "BILLY IDOL",
+   "PINK FLOYD",
+   "PAUL SIMON",
 ];
 
 
 const hypakOrNeopakAndPhysioject = [
-   "ADALIMUMAB",
-   "ETANERCEPT",
-   "ABATACEPT",
-   "ALIROCUMAB",
-   "EVOLOCUMAB",
-   "IXEKIZUMAB",
-   "ERENUMAB",
-   "GALCANEZUMAB",
-   "SUMATRIPTAN",
-   "DULAGLUTIDE",
-   "TRIZEPATIDE",
+   "BLACK SABBATH",
+   "BLONDIE",
+   "CAPTAIN BEEFHEART",
+   "THE SMALL FACES",
+   "PRODIGY",
 ];
 
 
 const hypakOrNeopakAndUltrasafe = [
-   "CERTOLIZUMAB PEGOL",
-   "VEDOLIZUMAB",
-   "USTEKINUMAB",
-   "MEPOLIZUMAB",
-   "DUPILUMAB",
-   "FILGRASTIM",
-   "DENOSUMAB",
+   "THE ROLLING STONES",
+   "THE KINKS",
+   "CAT STEVENS",
+   "THE BEATLES",
+  
 ];
 
 
 const justHypakOrNeopak = [
-   "BENRALIZUMAB",
-   "GLATIRAMER ACETATE",
+   "LED ZEPPELIN",
+   "THE CLASH",
 ];
 
 
 const justVystra = [
-   "INSULIN GLARGINE",
-   "INSULIN LISPO",
-   "INSULIN ASPART",
-   "TERIPARATIDE",
-   "SOMATROPIN",
-   "FOLLITROPIN ALFA",
-   "LIRAGLUTIDE VICTOZA",
-   "LIRAGLUTIDE SAXENDA",
-   "SEMAGLUTIDE OZEMPIC",
+   "THE BYRDS",
+   "BEASTIE BOYS",
+   "BIGAUDIO DYNAMITE",
+   "ORBITAL",
+  
 ];
 
 
@@ -121,7 +97,7 @@ export function photoOfWhatDevice(moleculeSelectorValue) {
        deviceName = "Wearable Device";
        return deviceName;
    } else {
-       console.log('I am an autoinjector');
+      //  console.log('I am an autoinjector');
        deviceName = "Autoinjector";
        return deviceName;
    }

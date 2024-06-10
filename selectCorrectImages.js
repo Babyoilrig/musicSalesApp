@@ -196,11 +196,11 @@ export function selectCorrectMedicineImage() {
      const nameWithoutBrackets = removeBracketsFromName(getMedicineSelectorValue).toUpperCase();
      getMedicineImage.src = `/${nameWithoutBrackets}.jpg`
    const deviceName = photoOfWhatDevice(nameWithoutBrackets);
-   deviceNameWriting.textContent = deviceName;
+   // deviceNameWriting.textContent = deviceName;
  } else {
    getMedicineImage.src = `/${getMedicineSelectorValue}.jpg`
    const deviceName = photoOfWhatDevice(getMedicineSelectorValue);
-   deviceNameWriting.textContent = deviceName;
+   // deviceNameWriting.textContent = deviceName;
  }
   }
 

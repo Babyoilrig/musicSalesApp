@@ -194,11 +194,11 @@ export function selectCorrectMedicineImage() {
    const getMedicineImage = document.querySelector('.medicine-image-large');
     if(getMedicineSelectorValue.includes("(" || ")")) {
      const nameWithoutBrackets = removeBracketsFromName(getMedicineSelectorValue).toUpperCase();
-     getMedicineImage.src = `/${nameWithoutBrackets}.png`
+     getMedicineImage.src = `/${nameWithoutBrackets}.jpg`
    const deviceName = photoOfWhatDevice(nameWithoutBrackets);
    deviceNameWriting.textContent = deviceName;
  } else {
-   getMedicineImage.src = `/${getMedicineSelectorValue}.png`
+   getMedicineImage.src = `/${getMedicineSelectorValue}.jpg`
    const deviceName = photoOfWhatDevice(getMedicineSelectorValue);
    deviceNameWriting.textContent = deviceName;
  }

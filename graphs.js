@@ -63,11 +63,13 @@ const aspChartCard = document.querySelector('.aspChartCard');
      //Need new conditions here
      //Combination 1
      //All three on
+    
      if (pfsButton.classList.contains('clicked-red') && daijButton.classList.contains('clicked-red') && dpButton.classList.contains('clicked-red')) {
       selectedButtons = "ThreeDevices";
-       generateCombinedChartThreeDevices({ device1: "Prefilled Syringe", device2: "Disposable autoinjector", device3: "Disposable pens"}, metric, selectedButtons);
+       generateCombinedChartThreeDevices({ device1: "PFS", device2: "disposable autoinjectors", device3: "Disposable pens"}, metric, selectedButtons);
     
      changeChartColumnColour(volume, e, "1", "4", "7");
+     console.log('I am combination 1');
      }
 
 
@@ -77,8 +79,9 @@ const aspChartCard = document.querySelector('.aspChartCard');
    //dp off
    else if (pfsButton.classList.contains('clicked-red') && daijButton.classList.contains('clicked-red') && !dpButton.classList.contains('clicked-red')) {
      selectedButtons = "PfsAndDaij";
-     generateCombinedChartTwoDevices({ device1: "Prefilled Syringe", device2: "Disposable autoinjector"}, metric, selectedButtons);
+     generateCombinedChartTwoDevices({ device1: "PFS", device2: "disposable autoinjectors"}, metric, selectedButtons);
      changeChartColumnColour(volume, e, "1", "4", "7");
+     console.log('I am combination 2');
    }
 
 
@@ -88,8 +91,9 @@ const aspChartCard = document.querySelector('.aspChartCard');
      //dp on
      else if (!pfsButton.classList.contains('clicked-red') && daijButton.classList.contains('clicked-red') && dpButton.classList.contains('clicked-red')) {
        selectedButtons = "DaijAndDp";
-       generateCombinedChartTwoDevices({ device1: "Disposable autoinjector", device2: "Disposable pens"}, metric, selectedButtons);
+       generateCombinedChartTwoDevices({ device1: "disposable autoinjectors", device2: "Disposable pens"}, metric, selectedButtons);
        changeChartColumnColour(volume, e, "1", "4", "7");
+       console.log('I am combination 3');
      }
 
 
@@ -100,8 +104,9 @@ const aspChartCard = document.querySelector('.aspChartCard');
      else if (pfsButton.classList.contains('clicked-red') && !daijButton.classList.contains('clicked-red') && dpButton.classList.contains('clicked-red')) {
        console.log('I am combination 4');
        selectedButtons = "PfsAndDp";
-       generateCombinedChartTwoDevices({ device1: "Prefilled Syringe", device2: "Disposable pens"}, metric, selectedButtons);
+       generateCombinedChartTwoDevices({ device1: "PFS", device2: "disposable pens"}, metric, selectedButtons);
        changeChartColumnColour(volume, e, "1", "4", "7");
+       console.log('I am combination 4');
      }  
 
 
@@ -113,8 +118,9 @@ const aspChartCard = document.querySelector('.aspChartCard');
 
    else if (pfsButton.classList.contains('clicked-red') && !daijButton.classList.contains('clicked-red') && !dpButton.classList.contains('clicked-red')) {
      selectedButtons = "Pfs";
-     generateChart("Prefilled Syringe", metric, selectedButtons);
+     generateChart("PFS", metric, selectedButtons);
      changeChartColumnColour(volume, e, "0", "3", "6");
+     console.log('I am combination 5');
    }
 
 
@@ -127,8 +133,9 @@ const aspChartCard = document.querySelector('.aspChartCard');
   
    else if (!pfsButton.classList.contains('clicked-red') && daijButton.classList.contains('clicked-red') && !dpButton.classList.contains('clicked-red')) {
      selectedButtons = "Daij";
-     generateChart("Disposable autoinjector", metric, selectedButtons);
+     generateChart("disposable autoinjectors", metric, selectedButtons);
      changeChartColumnColour(volume, e, "1", "4", "7");
+     console.log('I am combination 6');
    }
 
 
@@ -142,6 +149,7 @@ const aspChartCard = document.querySelector('.aspChartCard');
      selectedButtons = "Dp";
      generateChart("Disposable pens", metric, selectedButtons);
      changeChartColumnColour(volume, e, "2", "5", "8");
+     console.log('I am combination 7');
    }
      chartCard.classList.remove('hidden');
    }

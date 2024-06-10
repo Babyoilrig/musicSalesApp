@@ -129,11 +129,11 @@ export function photoOfWhatDevice(moleculeSelectorValue) {
 
 
 /////Product Opportunities
-const productBox1 = document.querySelector('.medicine-container1'); //Hypak
-const productBox2 = document.querySelector('.medicine-container2'); //Neopak
-const productBox3 = document.querySelector('.medicine-container3'); //Physioject
-const productBox4 = document.querySelector('.medicine-container4'); //Vystra
-const productBox5 = document.querySelector('.medicine-container5'); //Ultrasafe
+const productBox1 = document.querySelector('.medicine-container1'); //Spotify
+const productBox2 = document.querySelector('.medicine-container2'); //Apple Music
+const productBox3 = document.querySelector('.medicine-container3'); //Amazon Music
+const productBox4 = document.querySelector('.medicine-container4'); //Youtube
+const productBox5 = document.querySelector('.medicine-container5'); //Soundcloud
 
 
 export function showAndHideProductBoxes(moleculeSelectorValue) {

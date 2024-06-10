@@ -12,19 +12,18 @@ export function sourceGraphData(metric, deviceTitle, year, data1, data2, data3, 
  // console.log('I am createGraphData and I have run!');
  const getDpButton = document.querySelector('.disposable-pen');
  // console.log(data1);
- // console.log(metric);
+//  console.log(deviceTitle);
+
+ let deviceTitleMusic;
 
 
- //So BASICALLY - the code below works - BUT, we will also need to pass:
- //-That it only needs to happen when pfs is clicked (and no other buttons)
- //The axis title needs changing to hundreds
- //The cagr lines might also be affected
-
-
-
-
- //Now just need to get the cagr to be the same - I'm guessing that also needs to be divided by 1 million
- //Instead of a billion
+if(deviceTitle === "PFS") {
+  deviceTitleMusic = "DOWNLOADS";
+} else if (deviceTitle === "AI") {
+  deviceTitleMusic = "CD";
+} else if (deviceTitle === "DP") {
+  deviceTitleMusic = "VINYL";
+}
 
 
  if(molecule === "INSULIN ASPART" && metric === "Val" && deviceTitle === "PFS")
@@ -54,7 +53,7 @@ export function sourceGraphData(metric, deviceTitle, year, data1, data2, data3, 
 // console.log(`data1.${metricLowerCase}`);
 
      sourcedGraphData = {
-     label: `${deviceTitle} ${metricTitle} ${year}`,
+     label: `${deviceTitleMusic} ${metricTitle} ${year}`,
      data: [
            (data1 ? data1[metricLowerCase].find(item => item.year === year).value / metricDivisor : 0),
            (data2 ? data2[metricLowerCase].find(item => item.year === year).value / metricDivisor : 0),

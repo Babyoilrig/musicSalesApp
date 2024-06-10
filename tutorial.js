@@ -1,7 +1,4 @@
 
-
-
-
 export function showTutorialOnFirstVisit(){
   console.log('I am the checkIfFirstVisit function and I have run!');
   if (!localStorage.getItem('previouslyVisited')) {
@@ -14,10 +11,15 @@ export function showTutorialOnFirstVisit(){
     }
 }
 
-
+//THE First speech bubble is not showing and hiding
 export function showTutorial() {
+  console.log('I am show tutorial and I have run!');
   const getSpeechBubble1 = document.querySelector('.speech-bubble1');
-  getSpeechBubble1.classList.remove('hiding');
+  console.log(getSpeechBubble1);
+  if ([...getSpeechBubble1.classList].includes('hiding')) {
+    getSpeechBubble1.classList.remove('hiding');
+  }
+ 
 }
 
 

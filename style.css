@@ -1575,8 +1575,7 @@
  
  
  @media screen and (max-width: 853px) {
-  .speech-bubble3 {
-    /* visibility: visible; */
+  /* .speech-bubble3 {
     position: absolute;
     width: 20rem;
     top: 20.5rem; left: 3rem;
@@ -1611,7 +1610,7 @@
       z-index: 0;
       top: 9.4rem;
       left: 8px;
-  }
+  } */
   .speech-bubble4 {
     /* visibility: visible; */
     position: absolute;
@@ -1697,13 +1696,7 @@
  
  }
  
- 
- @media screen and (max-width: 780px) {
-  }
- 
- 
- 
- 
+
   @media screen and (max-width: 760px) {
     .buttons-section-red {
       justify-content: center;
@@ -1773,9 +1766,11 @@
  .speech-bubble2 {
   top: 9.5rem; right: 6rem;
  }
+
  .speech-bubble3 {
-  top: 31.5rem; left: 3rem;
+  top: 11.5rem; left: 3rem;
     }
+ 
     .speech-bubble4 {
       top: 32rem; left: 3rem;
   }
@@ -1784,8 +1779,25 @@
   }
  
  
+ @media screen and (max-width:725px) {
+  .speech-bubble3 {
+    top: 11.5rem; left: 1rem;
+      }
+ }
+
+ @media screen and (max-width:685px) {
+  .speech-bubble3 {
+    top: 11.5rem; left: 0;
+      }
+ }
  
+ /*Here need to change orientation*/
  
+ @media screen and (max-width:650px) {
+  .speech-bubble3 {
+    top: 41.5rem; left: 3rem;
+      }
+ }
  
  
  @media screen and (max-width:600px) {

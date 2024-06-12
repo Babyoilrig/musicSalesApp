@@ -1067,7 +1067,7 @@
    position: absolute;
    visibility: hidden;
    width: 20rem;
-   top: 0.1rem; right: 23.5rem;
+   top: 0; right: 22rem;
    padding: 1.5rem 1rem 1.5rem 1.5rem;
    background: #4f5ca4;
    -webkit-border-radius: 10px;
@@ -1162,7 +1162,7 @@
   position: absolute;
   visibility: hidden;
   width: 20rem;
-  top: 3.5rem; right: 23rem;
+  top: 3.5rem; right: 21.5rem;
    padding: 1rem 1rem 1.5rem 1rem;
    background: #4f5ca4;
    -webkit-border-radius: 18px;
@@ -1208,7 +1208,7 @@
   position: absolute;
   visibility: hidden;
   width: 20rem;
-  top: 13.5rem; right: 23.2rem;
+  top: 12.5rem; right: 21.2rem;
      padding: 1rem;
      background: #4f5ca4;
      -webkit-border-radius: 18px;
@@ -1250,7 +1250,7 @@
   position: absolute;
   visibility: hidden;
   width: 20rem;
-  top: 17.5rem; left: 15rem;
+  top: 12rem; left: 16rem;
    padding: 1rem 1rem 2rem 2rem;
    background: #4f5ca4;
    -webkit-border-radius: 18px;

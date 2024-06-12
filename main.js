@@ -143,6 +143,7 @@ return cagrValuesArray;
 showTutorialOnFirstVisit();
 
 
+
 fetchData("https://sxtmrgzt5e.execute-api.eu-west-1.amazonaws.com/prod/music").then(moleculeData => {
   
 

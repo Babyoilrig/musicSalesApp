@@ -9,6 +9,7 @@
  <body class="body">
    <script type="module">
      function showApp() {
+      console.log('I am show app and I have run!');
    const appBody = document.querySelector('.app');
    appBody.style.display = "block";
 }
@@ -16,6 +17,7 @@
 
      const passwordCheck = (prompt = "Please enter the password:") => {
        const password = window.prompt(prompt);
+      //  console.log('I am passwordCheck and I have run!');
        if(password !== "playbook2024") {
          passwordCheck("Incorrect password, please try again:");
      }
@@ -38,9 +40,9 @@
                <!--Speech bubble container 1-->
                  <div>
                    <!--Speech bubble 5-->
-                     <div class="speech-bubble5 hiding">
+                     <div class="speech-bubble5">
                        <p class="speech-bubble-writing">5. Click each graph to view the specific values for each geographical region and year</p>
-                       <div class="tutorial-button-container"><button class="speech-bubble-button speech-bubble-button5 hidden" data-index="5">FINISH</button>
+                       <div class="tutorial-button-container"><button class="speech-bubble-button speech-bubble-button5" data-index="5">FINISH</button>
                        </div>
                       
                      </div>
@@ -48,19 +50,19 @@
                  <!--Speech bubble container 2-->
                      <div>
                        <!--Speech bubble 2-->
-                         <div class="speech-bubble2 hiding">
+                         <div class="speech-bubble2">
                            <p class="speech-bubble-writing">2. Select one or multiple device type(s) to view their market data, either independently or cumulatively</p>
-                           <div class="tutorial-button-container"><button class="speech-bubble-button speech-bubble-button2 hidden" data-index="2">NEXT</button>
+                           <div class="tutorial-button-container"><button class="speech-bubble-button speech-bubble-button2" data-index="2">NEXT</button>
                            </div>
                          </div>
                      </div>
                      <!--Speech bubble container 3-->
                            <div>
                              <!--Speech bubble 1-->
-                               <div class="speech-bubble1 hiding">
+                               <div class="speech-bubble1">
                                  <p class="speech-bubble-writing">1. Select the desired artist in the dropdown box</p>
                                  <div class="tutorial-button-container-first">
-                                   <button class="speech-bubble-button speech-bubble-button1 hidden" data-index="1">NEXT</button>
+                                   <button class="speech-bubble-button speech-bubble-button1" data-index="1">NEXT</button>
                                    <button class="dismiss-button speech-bubble-button">DISMISS</button>
                                  </div>
                                </div>
@@ -68,13 +70,13 @@
                            <!--Speech bubble container 4-->
                                    <div>
                                      <!--Speech bubble 3-->
-                                       <div class="speech-bubble3 hiding">
+                                       <div class="speech-bubble3">
                                          <p class="speech-bubble-writing">3. Select 'Market Data' to view ACME's sales volume, value and average selling price of device(s) for the molecule</p>
                                          <div class="tutorial-button-container"><button class="speech-bubble-button speech-bubble-button3" data-index="3">NEXT</button>
                                          </div>
                                        </div>
                                        <!--Speech bubble 4-->
-                                       <div class="speech-bubble4 hiding">
+                                       <div class="speech-bubble4">
                                          <p class="speech-bubble-writing">4. Select 'Product Recommendations' to view streaming services suitable for the artist selected.</p>
                                          <div class="tutorial-button-container"><button class="speech-bubble-button speech-bubble-button4" data-index="4">NEXT</button>
                                          </div>

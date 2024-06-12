@@ -16,18 +16,21 @@ export function showTutorial() {
   console.log('I am show tutorial and I have run!');
   const getSpeechBubble1 = document.querySelector('.speech-bubble1');
   console.log(getSpeechBubble1);
-  if ([...getSpeechBubble1.classList].includes('hiding')) {
-    getSpeechBubble1.classList.remove('hiding');
-  }
+    // getSpeechBubble1.classList.remove('hiding');
+    getSpeechBubble1.style.visibility = "visible";
+  
  
 }
 
 
 export function hideSpeechBubbles(e) {
+  console.log('I am hideSpeechBubbles and I have run!')
   const index = e.target.dataset.index;
+  console.log(index);
   this.parentNode.parentNode.classList.add('hiding');
   const speechBubbleButtons = document.querySelectorAll('[data-index]');
   speechBubbleButtons.forEach(item => {
+    console.log(speechBubbleButtons);
       const currentIndex = parseInt(item.dataset.index);
       const indexToShow = parseInt(index) + 1;
       if (currentIndex === indexToShow) {

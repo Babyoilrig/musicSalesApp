@@ -1795,8 +1795,49 @@
  
  @media screen and (max-width:650px) {
   .speech-bubble3 {
-    top: 41.5rem; left: 3rem;
-      }
+    position: absolute;
+    visibility: hidden;
+    width: 20rem;
+    top: 30.5rem; left: 5rem;
+     padding: 1rem 1rem 2rem 2rem;
+     background: #4f5ca4;
+     -webkit-border-radius: 18px;
+     -moz-border-radius: 18px;
+     border-radius: 18px;
+   }
+   
+   
+   .speech-bubble3:after
+   {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 30px 20px 0;
+      border-color: #4f5ca4 transparent;
+      display: block;
+      width: 0;
+      z-index: 1;
+      /* bottom: -10px; */
+      top: 160px;
+      /* left: 105px; */
+      left: 40px;
+   }
+   
+   
+   .speech-bubble3:before
+   {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 32px 22px 0;
+      border-color: #4f5ca4 transparent;
+      display: block;
+      width: 0;
+      z-index: 0;
+      bottom: 10px;
+      left: 200px;
+   }
+   
  }
  
  

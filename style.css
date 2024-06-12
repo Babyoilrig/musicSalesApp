@@ -1316,9 +1316,25 @@
  
  
  /* Media Queries*/
+
+ /* @media screen and (min-width:3000px) {
+  .speech-bubble2 {
+    top: 10rem; right: 105rem;
+  }
+ }
+ 
+ @media screen and (min-width:2000px) {
+  .speech-bubble2 {
+    top: 10rem; right: 55rem;
+  }
+ } */
+
+ 
+
+
  @media screen and (min-width: 1850px) {
   .speech-bubble2 {
-    top: 9rem; right: 90rem;
+    top: 9.5rem; right: 105rem;
   }
   .pr-medicine-picture-container1 {
     padding-right: 0.8rem;
@@ -1883,7 +1899,7 @@
     top: 38.5rem; left: 3rem;
       }
       .speech-bubble4 {
-        top: 35rem; left: 3rem;
+        top: 43rem; left: 3rem;
     }
     .speech-bubble5 {
       top: 61.5rem; left: 8rem;

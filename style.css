@@ -1208,7 +1208,7 @@
   position: absolute;
   visibility: hidden;
   width: 20rem;
-  top: 12.5rem; right: 21.2rem;
+  top: 12.5rem; right: 21rem;
      padding: 1rem;
      background: #4f5ca4;
      -webkit-border-radius: 18px;
@@ -1440,7 +1440,7 @@
   top: 9rem; right: 28rem;
  }
  .speech-bubble4 {
-  top: 22rem; right: 28rem;
+  top: 22rem; right: 27rem;
  }
  .speech-bubble5 {
   top: 28.5rem; left: 30rem;
@@ -1611,8 +1611,7 @@
       top: 9.4rem;
       left: 8px;
   } */
-  .speech-bubble4 {
-    /* visibility: visible; */
+  /* .speech-bubble4 {
     position: absolute;
     width: 20rem;
     top: 21rem; left: 3rem;
@@ -1647,7 +1646,7 @@
       z-index: 0;
       top: 8.7rem;
       left: 8px;
-  }
+  } */
   .speech-bubble5 {
     top: 24rem; left: 12rem;
   }
@@ -1772,7 +1771,7 @@
     }
  
     .speech-bubble4 {
-      top: 32rem; left: 3rem;
+      top: 19rem; left: 2rem;
   }
   .speech-bubble5 {
     top: 62.5rem; left: 8rem;
@@ -1783,12 +1782,65 @@
   .speech-bubble3 {
     top: 11.5rem; left: 1rem;
       }
+      .speech-bubble4 {
+        top: 19rem; left: 1.2rem;
+    }
+ }
+/*Up to */
+ @media screen and (max-width: 700px) {
+  .speech-bubble4 {
+    top: 19rem; left: 0;
+}
  }
 
  @media screen and (max-width:685px) {
   .speech-bubble3 {
     top: 11.5rem; left: 0;
       }
+      .speech-bubble4 {
+        position: absolute;
+        visibility: hidden;
+        width: 20rem;
+        top: 9.5rem; left: 5rem;
+         padding: 1rem 1rem 2rem 2rem;
+         background: #4f5ca4;
+         -webkit-border-radius: 18px;
+         -moz-border-radius: 18px;
+         border-radius: 18px;
+       }
+       
+       
+       .speech-bubble4:after
+       {
+          content: '';
+          position: absolute;
+          border-style: solid;
+          border-width: 30px 20px 0;
+          border-color: #4f5ca4 transparent;
+          display: block;
+          width: 0;
+          z-index: 1;
+          /* bottom: -10px; */
+          top: 140px;
+          /* left: 105px; */
+          left: 280px;
+       }
+       
+       
+       .speech-bubble4:before
+       {
+          content: '';
+          position: absolute;
+          border-style: solid;
+          border-width: 32px 22px 0;
+          border-color: #4f5ca4 transparent;
+          display: block;
+          width: 0;
+          z-index: 0;
+          bottom: 200px;
+          left: 290px;
+       }
+       
  }
  
  /*Here need to change orientation*/
@@ -1837,6 +1889,49 @@
       bottom: 10px;
       left: 200px;
    }
+   .speech-bubble4 {
+    position: absolute;
+    visibility: hidden;
+    width: 20rem;
+    top: 35rem; left: 2rem;
+     padding: 1rem 1rem 2rem 2rem;
+     background: #4f5ca4;
+     -webkit-border-radius: 18px;
+     -moz-border-radius: 18px;
+     border-radius: 18px;
+   }
+   
+   
+   .speech-bubble4:after
+   {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 30px 20px 0;
+      border-color: #4f5ca4 transparent;
+      display: block;
+      width: 0;
+      z-index: 1;
+      /* bottom: -10px; */
+      top: 140px;
+      /* left: 105px; */
+      left: 10px;
+   }
+   
+   
+   .speech-bubble4:before
+   {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 32px 22px 0;
+      border-color: #4f5ca4 transparent;
+      display: block;
+      width: 0;
+      z-index: 0;
+      bottom: 200px;
+      left: 290px;
+   }
    
  }
  
@@ -1856,7 +1951,7 @@
     top: 38.5rem; left: 3rem;
       }
       .speech-bubble4 {
-        top: 42rem; left: 3rem;
+        top: 35rem; left: 3rem;
     }
     .speech-bubble5 {
       top: 72.5rem; left: 8rem;
@@ -1883,6 +1978,7 @@
         }
         .speech-bubble4 {
           top: 44rem; left: 3rem;
+          padding-right: -10rem;
         }
   }
  

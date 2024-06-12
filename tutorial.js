@@ -27,14 +27,16 @@ export function hideSpeechBubbles(e) {
   console.log('I am hideSpeechBubbles and I have run!')
   const index = e.target.dataset.index;
   console.log(index);
-  this.parentNode.parentNode.classList.add('hiding');
+  // this.parentNode.parentNode.classList.add('hiding');
+  this.parentNode.parentNode.style.visibility = "hidden";
   const speechBubbleButtons = document.querySelectorAll('[data-index]');
   speechBubbleButtons.forEach(item => {
-    console.log(speechBubbleButtons);
+    // console.log(speechBubbleButtons);
       const currentIndex = parseInt(item.dataset.index);
       const indexToShow = parseInt(index) + 1;
       if (currentIndex === indexToShow) {
-          item.parentNode.parentNode.classList.remove('hiding');
+          // item.parentNode.parentNode.classList.remove('hiding');
+          item.parentNode.parentNode.style.visibility = "visible";
       }
   })
 }

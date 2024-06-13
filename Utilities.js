@@ -26,11 +26,7 @@ export function divideByMillionBillionHundred(trendLineValues, metric, getMolecu
  
  
  export async function fetchData(endpoint) {
-    const response = await fetch(endpoint, {
-        headers: {
-            'Access-Control-Allow-Origin': '*',
-        }
-    });
+    const response = await fetch(endpoint);
     let fetchedData = await response.json();
     return fetchedData;
   

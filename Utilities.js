@@ -26,19 +26,12 @@ export function divideByMillionBillionHundred(trendLineValues, metric, getMolecu
  
  
  export async function fetchData(endpoint) {
-    const response = await fetch(endpoint, 
-        //Comma above and lnie below added
-        { method: "GET", mode: 'cors', headers: { 'Content-Type': 'application/json',}}
-    );
+    const response = await fetch(endpoint);
     let fetchedData = await response.json();
     return fetchedData;
   
   }
 
-//   fetch('http://ip-api.com/json', 
-//   { method: "GET", mode: 'cors', headers: { 'Content-Type': 'application/json',}})
-//   .then(response => response.json())
- 
  
   //Give number positive or negative sign
    export function giveNumberPositiveOrNegativeSign(number)

@@ -28,7 +28,7 @@ export function divideByMillionBillionHundred(trendLineValues, metric, getMolecu
  export async function fetchData(endpoint) {
     const response = await fetch(endpoint, {
         headers: {
-            "Access-Control-Allow-Origin": "d3lbkpk336idnz.cloudfront.net",
+            "Access-Control-Allow-Origin": "https://music-sales-lmwq481mj-babyoilrigs-projects.vercel.app/",
         }
     });
     let fetchedData = await response.json();

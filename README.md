@@ -17,6 +17,46 @@
 The hosted version of this application can be viewed [here:](https://d3lbkpk336idnz.cloudfront.net/) (The password is music123)
 
 ***
+# The features of the app include:
+* Dropdown menu to browse all the artists in the database
+* Information on the artist’s record company, style and last release date.
+<br/><br/><br/>
+## Market Data View
+When the ‘Market data’ (purple) button is highlighted, the app shows sales data for each artist for the years 2021, 2022 and the 2023 Volume is forecasted.
+<br/><br/>
+*	Data can be viewed for:
+*	(i) Sales Volume
+*	(ii) Sales Value
+*	(iii) Average Selling Price
+<br/><br/>
+## Regions
+As this app is designed to display global sales data, each graph shows data for four geographical regions:
+* AAA (Asia, Australia and Africa).
+* Europe
+* Latin America
+* North America
+<br/><br/>
+The data can also be viewed by different music format (individually or combined), these are:
+* (i) Downloads
+* (ii) CDs
+* (iii) Vinyl
+  <br/><br/>
+## Graph Features
+* The graphs are animated and display different information depending on what buttons are selected
+* The graphs have a hover function which show the sales statistics of each coloured graph bar on hover.
+* The CAGR % (Compound Annual Growth Rate) lines were added at the client’s request.
+* These are animated and are ‘redrawn’ based on what buttons are selected.
+* There is also a dynamic ‘key’ displayed in the bottom right hand corner – which changes depending on what information is displayed on the graph.
+   <br/><br/>
+## Charts
+* When each graph is clicked the same sales information is displayed in chart form (for a more detailed breakdown).
+* The CAGR % can also be viewed in the charts.
+   <br/><br/>
+## Tutorial
+* The application includes a tutorial which assists users in navigating and using the app.
+   <br/><br/>
+## Product Recommendations View
+* When the ‘Purple Recommendations’ (purple) button is highlighted, examples of the artist’s music is displayed, as well as recommendations (and links to) streaming services that are given based on the sales information of the individual artist selected.
 
 ***
 

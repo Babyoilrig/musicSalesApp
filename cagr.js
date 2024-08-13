@@ -5,8 +5,7 @@ import { divideByMillionBillionHundred, giveNumberPositiveOrNegativeSign } from 
   //Function to calculate CAGR
   export default function calculateCAGR(beginningValues, endingValues, numberOfYears, metric, isTotal, getMolecule, device) {
    if(isTotal === 'true') {
-   //   console.log('isTotal is:');
-   // console.log(isTotal);
+  
   
    //Here taking two arrays and making them into one array of arrays - like this [[beginningVal, endingVal], [beginningVal, endingVal]] etc
   
@@ -22,7 +21,6 @@ import { divideByMillionBillionHundred, giveNumberPositiveOrNegativeSign } from 
 
 
    let arrayOfBeginningAndEndingValues = beginningValues.map((element, index) => [element, endingValues[index]]);
-   // console.log(arrayOfBeginningAndEndingValues);
   
    arrayOfBeginningAndEndingValues.map((element, index) => {
          beginningValue = element[0];
@@ -40,25 +38,21 @@ import { divideByMillionBillionHundred, giveNumberPositiveOrNegativeSign } from 
 
 
      } else {
-       // console.log(`I am the else statement and I have run!`);
        const cagr = (Math.pow(endingValue / beginningValue, 1 / numberOfYears) - 1);
 
 
        ///////////////////////////////////////////////
        //THIS SECTION IS FINDING % NUMBER FOR LINE
        const cagrPercentage = cagr * 100;
-       // console.log(cagrPercentage);
 
 
        cagrPercentageRounded = cagrPercentage.toFixed(2);
-       // console.log(cagrPercentageRounded);
 
 
        //Here need to give cagr positive or negative sign
        const cagrPositiveOrNegativeRounded = giveNumberPositiveOrNegativeSign(cagrPercentageRounded);
        cagrPercentageArray.push(cagrPositiveOrNegativeRounded);
-       // console.log(cagrPercentageArray);
-       // console.log(isTotal);
+       
 
 
       
@@ -155,8 +149,6 @@ import { divideByMillionBillionHundred, giveNumberPositiveOrNegativeSign } from 
        endingPointsWithKeysAndCagrPercentage.push(endingPointsWithKeys, cagrPercentageWithKeys);
 
 
-       // console.log(metric);
-       // console.log(endingPointsWithKeysAndCagrPercentage);
        return endingPointsWithKeysAndCagrPercentage;
 
 

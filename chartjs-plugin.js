@@ -1,3 +1,6 @@
+
+//This plugin creates a watermark behind each graph saying the data is confidential. 
+//This is currently disabled - but can be turned back on if necessary,
 const waterMarkPlugin = {
     id: 'waterMark',
     afterDatasetsDraw: (chart) => {

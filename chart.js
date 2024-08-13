@@ -3,7 +3,6 @@ import calculateCAGR from './cagr';
 
 export function showTable(data, metric, cagrArrayForTables, selectedButtons) {
    let tableDiv;
-   // console.log('I am showTable and I have run!');
   
    //Here need to add functionality to make Insulin Aspart val chart wider
 
@@ -37,7 +36,6 @@ export function showTable(data, metric, cagrArrayForTables, selectedButtons) {
 
 
    export function createTableInner(data, tableName, metric, cagrArrayForTables, selectedButtons) {
-       // console.log('I am create table inner and I have run!');
        let cagrArrayForMetric;
       
        //Next need to make new column at the end - and pass the data to it that is required
@@ -70,14 +68,11 @@ export function showTable(data, metric, cagrArrayForTables, selectedButtons) {
           })
           addYearlyTotalsToChart(yearTotals, tBody, metric);
           const growthColumnCells = addExtraColumnToTable(metric, tableName, tBody, yearTotals);
-          //Here!!
           populateGrowthColumnInTable(selectedButtons, cagrArrayForMetric, growthColumnCells, metric);
  
    //METRIC VAL
        } else if (metric == 'val') {
-           // console.log('I am the else if statment for val metric!');
            cagrArrayForMetric = cagrArrayForTables[1];
-           // console.log(cagrArrayForMetric);
            tHead.rows[0].insertCell(0).innerText = `${data.labelsTop[0]}`;
            tHead.rows[0].insertCell(1).innerText = `${data.labelsTop[1]}`;
            tHead.rows[0].insertCell(2).innerText = `Growth Rate`;
@@ -96,15 +91,12 @@ export function showTable(data, metric, cagrArrayForTables, selectedButtons) {
        });
        addYearlyTotalsToChart(yearTotals, tBody, metric);
        const growthColumnCells = addExtraColumnToTable(metric, tableName, tBody, yearTotals);
-       // console.log(growthColumnCells);
        populateGrowthColumnInTable(selectedButtons, cagrArrayForMetric, growthColumnCells, metric);
-       // console.log(growthColumnCells);
 
 
        //METRIC ASP
        } else if (metric == 'asp') {
            cagrArrayForMetric = cagrArrayForTables[2];
-           // console.log(cagrArrayForMetric);
            tHead.rows[0].insertCell(0).innerText = `${data.labelsTop[0]}`;
            tHead.rows[0].insertCell(1).innerText = `${data.labelsTop[1]}`;
            tHead.rows[0].insertCell(2).innerText = `Growth Rate`;
@@ -123,7 +115,6 @@ export function showTable(data, metric, cagrArrayForTables, selectedButtons) {
        });
        addYearlyTotalsToChart(yearTotals, tBody, metric);
        const growthColumnCells = addExtraColumnToTable(metric, tableName, tBody, yearTotals);
-       // console.log(growthColumnCells);
        populateGrowthColumnInTable(selectedButtons, cagrArrayForMetric, growthColumnCells, metric);
       
        }
@@ -133,9 +124,7 @@ export function showTable(data, metric, cagrArrayForTables, selectedButtons) {
 export function changeChartColumnColour(volume, e, colour1, colour2, colour3) {
        let table;
        const graphName = e.currentTarget.dataset.value;
-       // console.log(graphName);
        if (graphName == "vol-graph") {
-           // console.log(graphName);
            table = document.querySelector('.table-vol');
            //First column
            const firstColumn = table.querySelectorAll("td:nth-child(2)");
@@ -147,7 +136,6 @@ export function changeChartColumnColour(volume, e, colour1, colour2, colour3) {
               const thirdColumn = table.querySelectorAll("td:nth-child(4)");
               thirdColumn.forEach(cell => cell.style.backgroundColor = volume.data.datasets[`${colour3}`].backgroundColor);
          } else if (graphName == "val-graph") {
-           // console.log(graphName);
            table = document.querySelector('.table-val');
            //First column
            const firstColumn = table.querySelectorAll("td:nth-child(2)");
@@ -159,7 +147,6 @@ export function changeChartColumnColour(volume, e, colour1, colour2, colour3) {
               const thirdColumn = table.querySelectorAll("td:nth-child(4)");
               thirdColumn.forEach(cell => cell.style.backgroundColor = 'white');
          } else if (graphName == "asp-graph") {
-           // console.log(graphName);
            table = document.querySelector('.table-asp');
            //First column
            const firstColumn = table.querySelectorAll("td:nth-child(2)");
@@ -231,7 +218,6 @@ function addYearlyTotalsToChart(yearTotals, tBody, metric) {
 
 
 function addExtraColumnToTable(metric, tableName, tBody, yearTotals) {
-   // console.log('I am addExtraColumnToTable and I have run!');
    let rowNumber;
    let growthColumn = [];
    let checkedForZeroValue;
@@ -246,11 +232,7 @@ function addExtraColumnToTable(metric, tableName, tBody, yearTotals) {
        return growthColumn;
    } else if (metric == "vol") {
    const totalCagrPercentageVol = calculateCagrForTotalsRow(yearTotals, metric);
-   // console.log('Total cagr percentage vol is:');
-   // console.log(totalCagrPercentageVol);
-   //Here i think we need to check for zero and then change to 'N/A'
    checkedForZeroValue = checkForCagrZeroAndChangeToNotApplicable(totalCagrPercentageVol);
-   // console.log(checkedForZeroValue);
 
 
    const growth5 = tBody.rows[4].insertCell(rowNumber);
@@ -266,18 +248,14 @@ function addExtraColumnToTable(metric, tableName, tBody, yearTotals) {
 
 
    } else if(metric == "val") {
-       // console.log(growthColumn);
    const totalCagrPercentageVal = calculateCagrForTotalsRow(yearTotals, metric);
-   // console.log(totalCagrPercentageVal);
 
 
    checkedForZeroValue = checkForCagrZeroAndChangeToNotApplicable(totalCagrPercentageVal);
-   // console.log(checkedForZeroValue);
 
 
    const growth5 = tBody.rows[4].insertCell(rowNumber);
    growthColumn.push(growth5);
-   // console.log(checkedForZeroValue);
    if(checkedForZeroValue[0] === "N/A") {
        growth5.innerText = `${checkedForZeroValue}`;
    } else {
@@ -295,15 +273,12 @@ function addExtraColumnToTable(metric, tableName, tBody, yearTotals) {
 
 
 function populateGrowthColumnInTable(selectedButtons, cagrArrayForMetric, growthColumnCells, metric) {
-   // console.log('I am populateGrowthColumnInTable and I have run!');
-   // console.log(growthColumnCells);
    let cagrValuesToInputIntoTable;
    let cagrValuesToInputIntoTableArray = [];
    let cagrVariableForSearching;
    cagrVariableForSearching = `${metric}${selectedButtons}`;
        cagrValuesToInputIntoTable = cagrArrayForMetric[cagrVariableForSearching];
       
-   // console.log(cagrValuesToInputIntoTable);
 
 
 for (let [key, value] of Object.entries(cagrValuesToInputIntoTable)) {
@@ -330,24 +305,20 @@ for (let [key, value] of Object.entries(cagrValuesToInputIntoTable)) {
        }
    });
 }
-// console.log(cagrValuesToInputIntoTableArray);
 }
 
 
 function calculateCagrForTotalsRow(yearTotals, metric) {
  
-   // console.log('I am calculateCagrForTotalsRow and I have run!');
-   // console.log(metric);
    let beginningValue = [];
    let endingValue = [];
    let numberOfYears;
    let cagrForTotal;
    let isTotal;
-   // console.log(yearTotals);
    if(metric === 'vol') {
        isTotal = 'true';
        numberOfYears = 2;
-//Here - is a check (for vol) if the yrear 1 value is zero, it will use the year 2 value.
+//Here - is a check (for vol) if the year 1 value is zero, it will use the year 2 value.
 if (yearTotals[0] === 0) {
    beginningValue.push(yearTotals[1]);
 } else {
@@ -356,20 +327,14 @@ if (yearTotals[0] === 0) {
 
 
        endingValue.push(yearTotals[2]);
-       // console.log(beginningValue);
-       // console.log(endingValue);
        cagrForTotal = calculateCAGR(beginningValue, endingValue, numberOfYears, metric, isTotal);
-       // console.log(cagrForTotal);
        return cagrForTotal;
    } if (metric === 'val') {
        isTotal = 'true';
        numberOfYears = 1;
        beginningValue.push(yearTotals[0]);
        endingValue.push(yearTotals[1]);
-       // console.log(beginningValue);
-       // console.log(endingValue);
        cagrForTotal = calculateCAGR(beginningValue, endingValue, numberOfYears, metric, isTotal);
-       // console.log(cagrForTotal);
        return cagrForTotal;
    }
  
@@ -381,20 +346,14 @@ if (yearTotals[0] === 0) {
 //Here function to check for zero - if zero - change to 'N/A'
 
 
-
-
 function checkForCagrZeroAndChangeToNotApplicable(array) {
    // console.log('I am checkForCagrZeroAndChangeToNotApplicable and I have run!')
    array.forEach((item, index) => {
        if(array[index] === 0) {
-           //This line needs changing below - maybe need to push it in or something...
-
-
            array[index] = "N/A";
        }
    }
    )
-   // console.log(array);
    return array;
 }
 

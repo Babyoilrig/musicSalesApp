@@ -11,12 +11,10 @@ export function showTutorialOnFirstVisit(){
     }
 }
 
-//THE First speech bubble is not showing and hiding
 export function showTutorial() {
   console.log('I am show tutorial and I have run!');
   const getSpeechBubble1 = document.querySelector('.speech-bubble1');
   console.log(getSpeechBubble1);
-    // getSpeechBubble1.classList.remove('hiding');
     getSpeechBubble1.style.visibility = "visible";
   
  
@@ -24,18 +22,14 @@ export function showTutorial() {
 
 
 export function hideSpeechBubbles(e) {
-  console.log('I am hideSpeechBubbles and I have run!')
   const index = e.target.dataset.index;
   console.log(index);
-  // this.parentNode.parentNode.classList.add('hiding');
   this.parentNode.parentNode.style.visibility = "hidden";
   const speechBubbleButtons = document.querySelectorAll('[data-index]');
   speechBubbleButtons.forEach(item => {
-    // console.log(speechBubbleButtons);
       const currentIndex = parseInt(item.dataset.index);
       const indexToShow = parseInt(index) + 1;
       if (currentIndex === indexToShow) {
-          // item.parentNode.parentNode.classList.remove('hiding');
           item.parentNode.parentNode.style.visibility = "visible";
       }
   })

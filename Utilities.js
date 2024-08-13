@@ -6,7 +6,6 @@ export function divideByMillionBillionHundred(trendLineValues, metric, getMolecu
        dividedNumbers = trendLineValues.map(item => item / 1_000_000);
         return dividedNumbers;
     }
-    //THIS ALSO NEEDS TOP HAVE BUTTON
     else if (metric === 'val' && getMolecule === "INSULIN ASPART" && device === "Prefilled Syringe") {
         dividedNumbers = trendLineValues.map(item => item / 1_000_000);
         return dividedNumbers;

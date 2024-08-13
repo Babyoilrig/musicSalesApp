@@ -49,8 +49,7 @@ if(deviceTitle === "PFS") {
  metricLowerCase = "asp";
  metricDivisor = 100;
 }
-// console.log(metricLowerCase);
-// console.log(`data1.${metricLowerCase}`);
+
 
      sourcedGraphData = {
      label: `${deviceTitleMusic} ${metricTitle} ${year}`,
@@ -76,13 +75,11 @@ return sourcedGraphData;
 
 
 export function createGraphDataset(dataArray, metric) {
- // console.log('I am create graphDataset and I have run!')
  let chartDataTitle = `chartData${metric}`;
  chartDataTitle = {
    labels: ["AAA", "Europe", "Latin Am.", "North Am."],
    datasets: dataArray,
  }
- // console.log(chartDataTitle);
  return chartDataTitle;
 }
 

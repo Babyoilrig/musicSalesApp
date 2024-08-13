@@ -23,10 +23,6 @@ export function createSingularDatasetForTablesAndTrendlines({containers}, primar
  const passedData = containers.find(item => item.primaryContainer === primaryContainer);
 
 
- //Here will need to put in the same if statement as is in generateGraphData - wbut need to make sure it is getting passed
- //everything it needs
-
-
    return {
        labelsTop: ["2021", "2022", "2023"],
  

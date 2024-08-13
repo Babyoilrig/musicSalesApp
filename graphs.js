@@ -60,7 +60,7 @@ const aspChartCard = document.querySelector('.aspChartCard');
      let selectedButtons;
 
 
-     //Need new conditions here
+     //CONDITIONS
      //Combination 1
      //All three on
     

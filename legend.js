@@ -1,5 +1,3 @@
-//THE triangles legend is not working - need to fix this
-
 
 export function showLegend(volume, device, colours) {
     const getLegend = document.querySelector('.legend-wrapper');
@@ -16,12 +14,10 @@ export function showLegend(volume, device, colours) {
     const colour4 = colours.colour4;
     const colour5 = colours.colour5;
     const colour6 = colours.colour6;
-    // console.log(colour6);
     if (getLegend.classList.contains('hidden')) {
         getLegend.classList.remove('hidden');
     }
     if(device == "Pfs") {
-        // getPfsLegendBox.classList.contains('hiding');
         getDaijLegendBox.classList.add('hidden');
         getDpLegendBox.classList.add('hidden');
         getPfsLegendBox.classList.remove('hidden');
@@ -30,7 +26,6 @@ export function showLegend(volume, device, colours) {
     } else if (device == 'Daij') {
         getPfsLegendBox.classList.add('hidden');
         getDpLegendBox.classList.add('hidden');
-        // getDaijLegendBox.classList.contains('hiding');
         getDaijLegendBox.classList.remove('hidden');
     } else if (device == 'Dp') {
         getPfsLegendBox.classList.add('hidden');
@@ -56,7 +51,6 @@ export function showLegend(volume, device, colours) {
         getYearThreePartSquare.forEach(square => square.classList.remove('hidden'));
         getTriangleSquares.forEach(square => square.classList.add('hidden'));
     }
-    //This section needs changing now - cos there are more combinations??
     document.querySelector('.first-triangle-top-left').style.borderTopColor = volume.data.datasets[colour1].backgroundColor;
     document.querySelector('.first-triangle-top-left').style.borderRightColor = volume.data.datasets[colour2].backgroundColor;
    

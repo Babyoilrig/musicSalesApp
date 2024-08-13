@@ -78,7 +78,6 @@ colour2: '#d3ffb3',
 
 //Functionality for pushin cagrs into arrays so can access for charts
 function makeCagrValuesArrayToPassToChart() {
- // console.log('I am makeCagrValuesArrayToPassToChart and I have run');
  const keyArrayVol = ["volPfs", "volDaij", "volDp", "volPfsAndDaij", "volDaijAndDp", "volPfsAndDp", "volThreeDevices"];
 const keyArrayVal = ["valPfs", "valDaij", "valDp", "valPfsAndDaij", "valDaijAndDp", "valPfsAndDp", "valThreeDevices"];
 const keyArrayAsp = ["aspPfs", "aspDaij", "aspDp"];
@@ -189,10 +188,8 @@ function checkIDAndFetchMainData(dropDownValue) {
    data = fetchedData;
    //Adding values to page for brand name, indication, patent
    console.log({ data });
-   //This below
   
    brandNameText.textContent = data.brandName;
-   //This below
    indicationText.textContent = data.indication;
    patentExpiryText.textContent = data.usPatentExpiry;
    console.log({data});
@@ -214,7 +211,6 @@ function checkIDAndFetchMainData(dropDownValue) {
 
 
    const pfsAaa = pfs ? pfs.region.AAA : 0;
-  //  console.log(pfsAaa);
    const pfsEurope = pfs ? pfs.region.EUROPE : 0;
    const pfsLatinAmerica = pfs ? pfs.region.LATINAMERICA : 0;
    const pfsNorthAmerica = pfs ? pfs.region.NORTHAMERICA : 0;
@@ -240,10 +236,8 @@ function checkIDAndFetchMainData(dropDownValue) {
    const dpEurope = dp ? dp.region.EUROPE : 0;
    const dpLatinAmerica = dp ? dp.region.LATINAMERICA : 0;
    const dpNorthAmerica = dp ? dp.region.NORTHAMERICA : 0;
-    //Here make functionality to change size of Insulin Aspart graph canvas
-   //REMEMBER ASWELL - it is only for Pfs that it happens! ****************
+    //Here make functionality to change size of Insulin Aspart graph canvas - this only happens for pfs
    const molecule = data.name;
-   // console.log(molecule);
 
 
    // function changeWidthOfGraphForInsulinAspart() {
@@ -258,7 +252,6 @@ function checkIDAndFetchMainData(dropDownValue) {
 
    // changeWidthOfGraphForInsulinAspart();
   
-   //Might need to change the axis AND change the amount it is being divided by?
 
 
 
@@ -268,7 +261,6 @@ function findSingularBeginningAndEndingValuesforCAGR() {
  beginningAndEndingValuesPfsVal = generateDataforTrendlineOneDevice('PFS', 'val');
  console.log(beginningAndEndingValuesPfsVal);
  beginningAndEndingValuesPfsAsp = generateDataforTrendlineOneDevice('PFS', 'asp');
- // console.log(beginningAndEndingValuesPfsVol[2][1]);
 
 
  //Getting trendline data for Daij
@@ -320,12 +312,10 @@ findCombinedBeginningAndEndingValuesforCAGR();
 
 function callGenerateGraphDataAndPutDataInArray(metric, colours, molecule) {
 let graphDataArray = [];
-// console.log(molecule);
 
 
 if(metric == "Vol") {
 const graphDataPfsYear1 = sourceGraphData(metric, 'PFS', '2021', pfsAaa, pfsEurope, pfsLatinAmerica, pfsNorthAmerica, colours.colour0, 0, false, molecule);
-// console.log(graphDataPfsYear1);
 const graphDataDaijYear1 = sourceGraphData(metric, 'AI', '2021', daijAaa, daijEurope, daijLatinAmerica, daijNorthAmerica, colours.colour1, 0, true, molecule);
 const graphDataDpYear1 = sourceGraphData(metric, 'DP', '2021', dpAaa, dpEurope, dpLatinAmerica, dpNorthAmerica, colours.colour2, 0, true, molecule);
 const graphDataPfsYear2 = sourceGraphData(metric, 'PFS', '2022', pfsAaa, pfsEurope, pfsLatinAmerica, pfsNorthAmerica, colours.colour3, 1, false, molecule);
@@ -374,7 +364,6 @@ return graphDataArray;
 //Creating vol graph data
 const graphDataVol = callGenerateGraphDataAndPutDataInArray("Vol", colours, molecule);
 const volGraphDataset = createGraphDataset(graphDataVol, 'Vol');
-// console.log(volGraphDataset);
 
 
  //Creating val graph data
@@ -400,11 +389,11 @@ const aspGraphDataset = createGraphDataset(graphDataAsp, 'Asp');
    Chart.defaults.font.size = 16;
 
 
-   //This registers the use of the watermark plugin found in chartjs-plugin
+   //This registers the use of the watermark plugin found in chartjs-plugin - (CURRENTLY DISABLED)
   //  Chart.register(waterMarkPlugin);
 
 
-   //This registers the Chart Datalabels plugin - Datalabels are not currently showing - on purpose)
+   //This registers the Chart Datalabels plugin - (CURRENTLY DISABLED)
    // Chart.register(ChartDataLabels);
 
 
@@ -520,7 +509,6 @@ const aspGraphDataset = createGraphDataset(graphDataAsp, 'Asp');
    };
 
 
-   //TEST - this is how to change the axis to Millions on the fly
 
 
   
@@ -1355,12 +1343,9 @@ function showCorrectDataAndHighlightCorrectButtons(data, volume, value, asp) {
  else if (pfsButton.classList.contains('clicked-red') && !daijButton.classList.contains('clicked-red') && !dpButton.classList.contains('clicked-red')) {
    // PFS SHOWING
 
-
-   //HERE is where could call function to change dataset for val???
+//Changing scale for one molecule - as the values were two low to show on the higher value axis
    const molecule = data.name;
    if(molecule === "INSULIN ASPART") {
-     //We havent go access to the data here - so the dataset would need to be made elsewhere and then passed into here
-     // console.log(configVal);
      configVal.options.scales.y.title.text = 'Millions';
      console.log(value.data.datasets[0]);
      console.log(value.data.datasets[3]);
@@ -1684,8 +1669,6 @@ function showCorrectDataAndHighlightCorrectButtons(data, volume, value, asp) {
      daijButton.disbled = true;
      dpButton.classList.remove('clicked-red');
      dpButton.disabled = true;
-      // moleculeSelector.disabled = true;
-     // moleculeSelector.style.cursor = "auto";
      pfsButton.style.cursor = "auto";
      daijButton.style.cursor = "auto";
      dpButton.style.cursor = "auto";
@@ -1888,7 +1871,6 @@ const generateCombinedDataForTrendlineThreeDevices = (devices, metric) => {
 const generateTrendLineDataPoints = (relevantData, metric, device) => {
  //Generate Ymin points
  const trendLineBeginningValues = findBeginningValuesForCAGRFunction(relevantData, metric);
- //Here need to pass the molecule!!
  const getMolecule = data.name;
 
 
@@ -1942,8 +1924,6 @@ moleculeSelector.addEventListener('change', e => {
  console.log({ changeFired: moleculeSelector.value });
  const cagrDataToPass = checkIDAndFetchMainData(moleculeSelector.value);
 
-
- // console.log(cagrDataToPass);
 
 
  //Functionality to add correct medicine images into product recommendations

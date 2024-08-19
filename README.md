@@ -57,14 +57,16 @@ The data can also be viewed by different music format (individually or combined)
    <br/><br/>
 ## Product Recommendations View
 * When the ‘Purple Recommendations’ (purple) button is highlighted, examples of the artist’s music is displayed, as well as recommendations (and links to) streaming services that are given based on the sales information of the individual artist selected.
-
+<br/><br/>
 ***
+
 ## Potential Improvements
 * This application is a work in progress and there are some improvments that I would like to make in the future:
 * Refactor the code to make it more readable - this code was produced quickly to accommodate client deadlines. Refactoring it would make it more readable.
 * Restyling the front end - this app was styled based on client specifications. I would prefer to restyle to app in the future to make it more attractive and improve accessibility.
 * Spend more time improving the app for mobile - to more easily view the complex graphical data on mobile devices.
 
+ ***
 
 **Author**
 --------------
